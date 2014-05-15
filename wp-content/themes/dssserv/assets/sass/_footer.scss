@@ -1,0 +1,140 @@
+.footer{
+	height:100px;
+	font-size: 11px;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	padding-top: 15px;
+	.top{
+		height:35px;
+		.light{
+			color:$light-gray;
+			margin-left: 10px;
+		}
+		.site-by{
+			float:right;
+			a{
+				color:$gray-text;
+				text-decoration: none;
+			}
+		}
+	}
+	.bottom{
+		height:50px;
+		background-color: $gray;
+	}
+}
+.city{
+	background-image: url('../images/city.png');
+	background-repeat: no-repeat;
+	min-height: 350px;
+	min-width: 100%;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+
+}
+.home-contact{
+	color:#b5b1a9;
+	font-size: 14px;
+	text-transform: uppercase;
+	background: url(../images/bg-pattern.jpg);
+	padding-bottom: 35px;
+	padding-top: 45px;
+	.title{
+		color:#336699;
+		font-family: Georgia, Times, "Times New Roman", serif !important;
+		font-size: 26px;
+		display: block;
+		text-transform: none;
+		border-bottom: 1px solid #dad5ca;
+		padding-bottom: 10px;
+		margin-bottom: 15px;
+	}
+	.text{
+		font-family: Georgia, Times, "Times New Roman", serif !important;
+		font-size: 14px;
+		font-style: italic;
+	}
+	.row{
+		border-bottom: 1px solid #d4d1cb;
+		margin:0;
+		padding-top: 10px;
+		input{
+			background-color: transparent;
+			border: none;
+			height: 30px;
+			width: 405px;
+			padding-left: 10px;
+			&.wpcf7-not-valid{
+				background-color: #f6d8d8;
+			}
+			&[type="submit"]{
+				background-color: #d2cec7;
+				border-color: #d2cec7;
+				font-family: 'Knockout50Welterweight';
+				color:#f6f4f2;
+				font-size: 16px;
+				width: 132px;
+				height:40px;
+				font-style: normal;
+				border-radius: 3px;
+			}
+		}
+	}
+	span{
+		&.wpcf7-not-valid-tip{
+			display:none;
+		}
+	}
+	.screen-reader-response{
+		display:none;
+	}
+	.wpcf7-response-output{
+		&.wpcf7-validation-errors{
+			display:none;			
+		}
+	}
+	textarea{
+		display: block;
+		height: 100px; 
+		width: 100%;
+		padding: 5px 0px;
+		margin-bottom: 20px;
+		resize: none;
+		font-size: 11px;
+		line-height: 24px;
+		border-bottom: 2px solid;
+		-webkit-appearance: none;
+		border-radius: 0;
+		background: url(../images/bg-textarea.png);
+		border:none;
+		background-color: transparent;
+		&.wpcf7-not-valid{
+				background-color: #f6d8d8;
+			}
+		}
+	.text{
+		text-transform: none;
+		.row{
+			border-bottom: none;
+			button{
+				&.btn-primary{
+					background-color: #d2cec7;
+					border-color: #d2cec7;
+					font-family: 'Knockout50Welterweight';
+					color:#f6f4f2;
+					font-size: 16px;
+					width: 132px;
+					height:40px;
+					font-style: normal;
+				}
+			}
+		}
+	}
+}
+.pref-beige{
+	background: url(../images/perforation-beige.png);
+	height: 6px;
+	width: 100%;
+	bottom: 49px;
+	position: relative;
+}

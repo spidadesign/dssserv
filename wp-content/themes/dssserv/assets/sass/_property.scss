@@ -1,0 +1,263 @@
+a{
+	text-decoration: none;
+}
+.page-title{
+	color:#336699;
+	font-family: Georgia, Times, "Times New Roman", serif !important;
+}
+.ps-options{
+	padding-top:15px;
+	padding-bottom: 15px;
+	background-color: #dad5ca;
+	color:#8f8d88;
+	font-size: 12px;
+	font-family: Georgia, Times, "Times New Roman", serif !important;
+	font-style: italic;
+	a{
+		&.btn{
+			&.btn-default{
+				background-color: #dad5ca;
+				border-color: #dad5ca;
+				font-family: 'Knockout50Welterweight';
+				font-style: normal;
+				color:#606060;
+				font-size: 16px;
+				&:hover{
+					background-color: #eceae4;
+					border-color:#eceae4;
+				}
+			}
+		}
+	}
+}
+.attachment-thumbnail{
+	max-height: 60px;
+	max-width: 60px;
+}
+.listings{
+	color: #336699;
+	font-size: 16px;
+	font-family: Georgia, Times, "Times New Roman", serif !important;
+	background: #f3f0ec;
+	.row{
+		margin-left:0;
+		margin-right:0;
+	}
+	.top-bar{
+		font-family: 'Knockout50Welterweight';
+		color: #336699;
+		font-size: 16px;
+	}
+	hr{
+		border-top: 2px solid rgba(51, 102, 153, 0.5);
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	.number{
+		padding-left: 30px;
+	}
+	.individual{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		&:hover{
+			background-color:#dfe4e7;
+		}
+	}
+	button{
+		&.btn{
+			&.btn-default{
+				background: url(../images/show-more.png) no-repeat center center;
+				color:transparent;
+				border-color:transparent;
+				height:17px;
+				width:16px;
+				&:hover{
+					color:transparent;
+					border-color:transparent;
+				}
+			}
+		}
+	}
+}
+
+.small-gallery{
+	img{
+		margin-left:10px;
+	}
+}
+.collapse{
+	&.in{
+		background: #fff;
+	}
+}
+.prop-content{
+	.title{
+		font-size: 18px;
+		color:#454546;
+		font-family: Georgia, Times, "Times New Roman", serif !important;
+		}
+	.top{
+		margin-bottom:20px;
+	}
+	.bottom{
+		color:#8f8d88;
+		font-size: 14px;
+	}
+	.bx-wrapper{
+		.bx-viewport{
+			height:240px !important;
+		}
+		.collapse-content{
+			li{
+				width:300px !important;
+			}
+		}
+	}
+}
+
+.single-property{
+	.title{
+		font-size: 18px;
+		color:#454546;
+		font-family: Georgia, Times, "Times New Roman", serif !important;
+		margin-left:0;
+		color:#454546;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+	.number{
+		color:#454546;
+	}
+	.content{
+		font-size: 14px;
+		color:#454546;
+		font-family: Georgia, Times, "Times New Roman", serif !important;
+		margin-left: 15px;
+		margin-top:20px;
+		margin-bottom:70px;
+		p{
+			line-height: 1.5;
+		}
+	}
+	a{
+		margin-left:15px;
+		&.btn{
+			&.btn-primary{
+				background-color:#668cb3;
+				border-color:#668cb3;
+				color:white;
+				font-size: 14px;
+				font-family: 'Knockout50Welterweight';
+				text-transform: uppercase;
+			}
+		}
+	}
+	h3{
+		display: inline-block;
+	}
+	.back{
+		display:inline-block;
+	}
+	.fr{
+		&.contact{
+			margin-right:30px;
+		}
+	}
+	.single-housing{
+		background-color: #f2efea;
+		padding-top:40px;
+		padding-bottom:60px;
+		.pref{
+			bottom:auto;
+			margin-top: -44px;
+		}
+	}
+	.pan_frame{
+		background:url(../images/corners.png) no-repeat center center;
+		height: 425px;
+		width: 425px;
+	}
+	.modal{
+		.modal-header{
+			background: url(../images/modal-bg.jpg) no-repeat center center;
+			height:250px;
+			.modal-title{
+				text-align: center;
+				color:#fff;
+				padding-top: 20px;
+				h4{
+					font-size: 30px;
+					text-transform: uppercase;
+				}
+				h3{
+					font-size: 58px;
+					margin-top: 0;
+					span{
+						font-family: Georgia, Times, "Times New Roman", serif !important;
+						text-decoration: underline;
+						font-style: italic;
+						padding-right: 5px;
+						font-size: 30px;
+					}
+				}
+			}
+		}
+		.modal-body{
+			p{
+				text-align: center;
+				color:#336699;
+				font-family: Georgia, Times, "Times New Roman", serif !important;
+				font-weight: 16px;
+				span{
+					font-size: 22px;
+					font-family: 'Knockout50Welterweight';
+				}
+			}
+			hr{
+				margin-top: 0px;
+				border-top: 2px solid #dad5ca;
+			}
+		}
+		.modal-dialog{
+			width:900px;
+		}
+	}
+}
+.nivo-lightbox-theme-default{
+	&.nivo-lightbox-overlay{
+		background:rgba(148, 146, 141, 0.9);
+	}
+	.nivo-lightbox-image{
+		img{
+			border: 6px solid white;
+		}
+	}
+	.nivo-lightbox-nav{
+		&:hover{
+			background-color: transparent;
+		}
+	}
+	.nivo-lightbox-next{
+			background: url(../images/next.png) no-repeat center center;
+		&:hover{
+			background: url(../images/next-hover.png) no-repeat center center;
+		}
+
+	}
+	.nivo-lightbox-prev{
+			background: url(../images/prev.png) no-repeat center center;
+		&:hover{
+			background: url(../images/prev-hover.png) no-repeat center center;
+		}
+
+	}
+	.nivo-lightbox-close{
+		background: url(../images/close.png) no-repeat center center;
+		height:60px;
+		width:60px;
+		&:hover{
+			background: url(../images/close-hover.png) no-repeat center center;
+		}
+	}
+}
+
