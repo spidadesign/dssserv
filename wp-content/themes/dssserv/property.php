@@ -98,9 +98,8 @@ get_header();
 			<div class="modal-body">
 				<?php //echo "<pre>"; print_r($custom); echo "</pre>"; ?>
 				<p>I am interested in <span><?php the_title(); ?></span> at <span><?php echo $custom['location'][0]; ?></span></p>
-				<div class="col-md-2 col-md-offset-5">
-					<hr>
-				</div>
+				<div class="col-md-2 col-md-offset-5"><hr></div>
+				<?php echo do_shortcode(apply_filters("the_content", '[contact-form-7 id="45" title="Property Information"]')); ?>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
