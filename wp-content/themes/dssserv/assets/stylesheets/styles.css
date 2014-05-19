@@ -7913,8 +7913,8 @@ a {
 /* line 175, ../sass/_property.scss */
 .single-property .pan_frame {
   background: url(../images/corners.png) no-repeat center center;
-  height: 425px;
-  width: 425px;
+  height: 415px;
+  width: 415px;
 }
 /* line 181, ../sass/_property.scss */
 .single-property .modal .modal-header {
@@ -7928,80 +7928,110 @@ a {
   padding-top: 20px;
 }
 /* line 188, ../sass/_property.scss */
+.single-property .modal .modal-header .modal-title img {
+  margin-left: 60px;
+}
+/* line 191, ../sass/_property.scss */
 .single-property .modal .modal-header .modal-title h4 {
   font-size: 30px;
   text-transform: uppercase;
 }
-/* line 192, ../sass/_property.scss */
+/* line 195, ../sass/_property.scss */
 .single-property .modal .modal-header .modal-title h3 {
   font-size: 58px;
   margin-top: 0;
 }
-/* line 195, ../sass/_property.scss */
+/* line 198, ../sass/_property.scss */
 .single-property .modal .modal-header .modal-title h3 span {
   font-family: Georgia, Times, "Times New Roman", serif !important;
   text-decoration: underline;
   font-style: italic;
   padding-right: 5px;
   font-size: 30px;
+  text-transform: none;
 }
-/* line 206, ../sass/_property.scss */
+/* line 209, ../sass/_property.scss */
+.single-property .modal .modal-header button.close {
+  background: url(../images/close.png) no-repeat center center;
+  height: 60px;
+  width: 60px;
+}
+/* line 217, ../sass/_property.scss */
 .single-property .modal .modal-body p {
   text-align: center;
   color: #336699;
   font-family: Georgia, Times, "Times New Roman", serif !important;
   font-weight: 16px;
+  text-transform: none;
 }
-/* line 211, ../sass/_property.scss */
+/* line 223, ../sass/_property.scss */
 .single-property .modal .modal-body p span {
   font-size: 22px;
   font-family: 'Knockout50Welterweight';
 }
-/* line 216, ../sass/_property.scss */
+/* line 228, ../sass/_property.scss */
 .single-property .modal .modal-body hr {
   margin-top: 0px;
   border-top: 2px solid #dad5ca;
 }
-/* line 221, ../sass/_property.scss */
+/* line 233, ../sass/_property.scss */
 .single-property .modal .modal-dialog {
   width: 900px;
 }
+/* line 237, ../sass/_property.scss */
+.single-property .modal-content {
+  border-radius: 0;
+}
+/* line 240, ../sass/_property.scss */
+.single-property .bx-wrapper, .single-property .bx-viewport {
+  width: 424px !important;
+  height: 425px !important;
+}
+/* line 244, ../sass/_property.scss */
+.single-property .bx-wrapper img, .single-property .bx-viewport img {
+  width: 424px !important;
+  height: 425px !important;
+}
+/* line 252, ../sass/_property.scss */
+.single-property ul.single-listing li:hover {
+  background: url(../images/prop-hover.png) center center no-repeat;
+}
 
-/* line 227, ../sass/_property.scss */
+/* line 260, ../sass/_property.scss */
 .nivo-lightbox-theme-default.nivo-lightbox-overlay {
   background: rgba(148, 146, 141, 0.9);
 }
-/* line 231, ../sass/_property.scss */
+/* line 264, ../sass/_property.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-image img {
   border: 6px solid white;
 }
-/* line 236, ../sass/_property.scss */
+/* line 269, ../sass/_property.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-nav:hover {
   background-color: transparent;
 }
-/* line 240, ../sass/_property.scss */
+/* line 273, ../sass/_property.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-next {
   background: url(../images/next.png) no-repeat center center;
 }
-/* line 242, ../sass/_property.scss */
+/* line 275, ../sass/_property.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-next:hover {
   background: url(../images/next-hover.png) no-repeat center center;
 }
-/* line 247, ../sass/_property.scss */
+/* line 280, ../sass/_property.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-prev {
   background: url(../images/prev.png) no-repeat center center;
 }
-/* line 249, ../sass/_property.scss */
+/* line 282, ../sass/_property.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-prev:hover {
   background: url(../images/prev-hover.png) no-repeat center center;
 }
-/* line 254, ../sass/_property.scss */
+/* line 287, ../sass/_property.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-close {
   background: url(../images/close.png) no-repeat center center;
   height: 60px;
   width: 60px;
 }
-/* line 258, ../sass/_property.scss */
+/* line 291, ../sass/_property.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-close:hover {
   background: url(../images/close-hover.png) no-repeat center center;
 }
@@ -8049,7 +8079,7 @@ a {
 }
 
 /* line 35, ../sass/_footer.scss */
-.home-contact {
+.home-contact, #interested {
   color: #b5b1a9;
   font-size: 14px;
   text-transform: uppercase;
@@ -8058,7 +8088,7 @@ a {
   padding-top: 45px;
 }
 /* line 42, ../sass/_footer.scss */
-.home-contact .title {
+.home-contact .title, #interested .title {
   color: #336699;
   font-family: Georgia, Times, "Times New Roman", serif !important;
   font-size: 26px;
@@ -8069,31 +8099,40 @@ a {
   margin-bottom: 15px;
 }
 /* line 52, ../sass/_footer.scss */
-.home-contact .text {
+.home-contact .text, #interested .text {
   font-family: Georgia, Times, "Times New Roman", serif !important;
   font-size: 14px;
   font-style: italic;
 }
 /* line 57, ../sass/_footer.scss */
-.home-contact .row {
+.home-contact .row, #interested .row {
   border-bottom: 1px solid #d4d1cb;
   margin: 0;
-  padding-top: 10px;
+  padding-top: 0px;
+  .
+		max-height: 40px;
 }
-/* line 61, ../sass/_footer.scss */
-.home-contact .row input {
+/* line 62, ../sass/_footer.scss */
+.home-contact .row label, #interested .row label {
+  bottom: -22px;
+  position: relative;
+  left: 10px;
+}
+/* line 67, ../sass/_footer.scss */
+.home-contact .row input, #interested .row input {
   background-color: transparent;
   border: none;
   height: 30px;
-  width: 405px;
-  padding-left: 10px;
+  width: 285px;
+  margin-left: 65px;
+  position: relative;
 }
-/* line 67, ../sass/_footer.scss */
-.home-contact .row input.wpcf7-not-valid {
+/* line 74, ../sass/_footer.scss */
+.home-contact .row input.wpcf7-not-valid, #interested .row input.wpcf7-not-valid {
   background-color: #f6d8d8;
 }
-/* line 70, ../sass/_footer.scss */
-.home-contact .row input[type="submit"] {
+/* line 77, ../sass/_footer.scss */
+.home-contact .row input[type="submit"], #interested .row input[type="submit"] {
   background-color: #d2cec7;
   border-color: #d2cec7;
   font-family: 'Knockout50Welterweight';
@@ -8103,21 +8142,22 @@ a {
   height: 40px;
   font-style: normal;
   border-radius: 3px;
-}
-/* line 84, ../sass/_footer.scss */
-.home-contact span.wpcf7-not-valid-tip {
-  display: none;
-}
-/* line 88, ../sass/_footer.scss */
-.home-contact .screen-reader-response {
-  display: none;
+  margin-left: -30px;
 }
 /* line 92, ../sass/_footer.scss */
-.home-contact .wpcf7-response-output.wpcf7-validation-errors {
+.home-contact span.wpcf7-not-valid-tip, #interested span.wpcf7-not-valid-tip {
   display: none;
 }
 /* line 96, ../sass/_footer.scss */
-.home-contact textarea {
+.home-contact .screen-reader-response, #interested .screen-reader-response {
+  display: none;
+}
+/* line 100, ../sass/_footer.scss */
+.home-contact .wpcf7-response-output.wpcf7-validation-errors, #interested .wpcf7-response-output.wpcf7-validation-errors {
+  display: none;
+}
+/* line 104, ../sass/_footer.scss */
+.home-contact textarea, #interested textarea {
   display: block;
   height: 100px;
   width: 100%;
@@ -8133,20 +8173,20 @@ a {
   border: none;
   background-color: transparent;
 }
-/* line 111, ../sass/_footer.scss */
-.home-contact textarea.wpcf7-not-valid {
+/* line 119, ../sass/_footer.scss */
+.home-contact textarea.wpcf7-not-valid, #interested textarea.wpcf7-not-valid {
   background-color: #f6d8d8;
 }
-/* line 115, ../sass/_footer.scss */
-.home-contact .text {
+/* line 123, ../sass/_footer.scss */
+.home-contact .text, #interested .text {
   text-transform: none;
 }
-/* line 117, ../sass/_footer.scss */
-.home-contact .text .row {
+/* line 125, ../sass/_footer.scss */
+.home-contact .text .row, #interested .text .row {
   border-bottom: none;
 }
-/* line 120, ../sass/_footer.scss */
-.home-contact .text .row button.btn-primary {
+/* line 128, ../sass/_footer.scss */
+.home-contact .text .row button.btn-primary, #interested .text .row button.btn-primary {
   background-color: #d2cec7;
   border-color: #d2cec7;
   font-family: 'Knockout50Welterweight';
@@ -8157,7 +8197,7 @@ a {
   font-style: normal;
 }
 
-/* line 134, ../sass/_footer.scss */
+/* line 142, ../sass/_footer.scss */
 .pref-beige {
   background: url(../images/perforation-beige.png);
   height: 6px;

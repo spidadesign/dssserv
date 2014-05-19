@@ -33,10 +33,14 @@ get_header();
 			<ul class="single-listing">
 				<?php foreach ( $images as $attachment_id => $attachment ):
 					$attr = array('class'=> "attachment-$size img-responsive");
+					$image = wp_get_attachment_image_src( $attachment_id, 'large' );
 				?>
 					<li>
-						<?php echo wp_get_attachment_image( $attachment_id, 'large', '', $attr ); ?>
-						<div class="pan_frame">&nbsp;</div>
+
+						<a href="<?php echo $image[0];?>" class="lightbox-gallery" data-lightbox-gallery="gallery<?php echo $count; ?>" title="<?php the_title();?>">
+							<?php echo wp_get_attachment_image( $attachment_id, 'large', '', $attr ); ?>
+							<div class="pan_frame">&nbsp;</div>
+						</a>
 					</li>
 				<?php endforeach;?>
 			</ul>
@@ -81,6 +85,14 @@ get_header();
 			</div>
 			<hr>
 			Share this listing on:
+				<!-- AddThis Button BEGIN -->
+				<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+					<a class="addthis_button_preferred_1"></a>
+					<a class="addthis_button_preferred_2"></a>
+				</div>
+				<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52b35f5a2a8b16b7"></script>
+				<!-- AddThis Button END -->
 		</div>
 	</div>
 </div>
@@ -102,8 +114,6 @@ get_header();
 				<?php echo do_shortcode(apply_filters("the_content", '[contact-form-7 id="45" title="Property Information"]')); ?>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
 			</div>
 		</div>
 	</div>

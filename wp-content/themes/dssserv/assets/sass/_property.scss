@@ -174,8 +174,8 @@ a{
 	}
 	.pan_frame{
 		background:url(../images/corners.png) no-repeat center center;
-		height: 425px;
-		width: 425px;
+		height: 415px;
+		width: 415px;
 	}
 	.modal{
 		.modal-header{
@@ -185,6 +185,9 @@ a{
 				text-align: center;
 				color:#fff;
 				padding-top: 20px;
+				img{
+					margin-left: 60px;
+				}
 				h4{
 					font-size: 30px;
 					text-transform: uppercase;
@@ -198,7 +201,15 @@ a{
 						font-style: italic;
 						padding-right: 5px;
 						font-size: 30px;
+						text-transform: none;
 					}
+				}
+			}
+			button{
+				&.close{
+					background: url(../images/close.png) no-repeat center center;
+					height: 60px;
+					width: 60px;
 				}
 			}
 		}
@@ -208,6 +219,7 @@ a{
 				color:#336699;
 				font-family: Georgia, Times, "Times New Roman", serif !important;
 				font-weight: 16px;
+				text-transform: none;
 				span{
 					font-size: 22px;
 					font-family: 'Knockout50Welterweight';
@@ -220,6 +232,27 @@ a{
 		}
 		.modal-dialog{
 			width:900px;
+		}
+	}
+	.modal-content{
+		border-radius: 0;
+	}
+	.bx-wrapper, .bx-viewport{
+		width: 424px !important;
+		height: 425px !important;
+
+		img{
+			width: 424px !important;
+			height: 425px !important;
+		}
+	}
+	ul{
+		&.single-listing{
+			li{
+				&:hover{
+					background: url(../images/prop-hover.png) center center no-repeat;
+				}
+			}
 		}
 	}
 }

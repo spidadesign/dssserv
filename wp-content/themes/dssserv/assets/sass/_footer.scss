@@ -32,7 +32,7 @@
 	display:block;
 
 }
-.home-contact{
+.home-contact, #interested{
 	color:#b5b1a9;
 	font-size: 14px;
 	text-transform: uppercase;
@@ -57,13 +57,20 @@
 	.row{
 		border-bottom: 1px solid #d4d1cb;
 		margin:0;
-		padding-top: 10px;
+		padding-top: 0px;.
+		max-height: 40px;
+		label{
+			bottom: -22px;
+			position: relative;
+			left: 10px;
+		}
 		input{
 			background-color: transparent;
 			border: none;
 			height: 30px;
-			width: 405px;
-			padding-left: 10px;
+			width: 285px;
+			margin-left: 65px;
+			position: relative;
 			&.wpcf7-not-valid{
 				background-color: #f6d8d8;
 			}
@@ -77,6 +84,7 @@
 				height:40px;
 				font-style: normal;
 				border-radius: 3px;
+				margin-left: -30px;
 			}
 		}
 	}
@@ -90,12 +98,12 @@
 	}
 	.wpcf7-response-output{
 		&.wpcf7-validation-errors{
-			display:none;			
+			display:none;
 		}
 	}
 	textarea{
 		display: block;
-		height: 100px; 
+		height: 100px;
 		width: 100%;
 		padding: 5px 0px;
 		margin-bottom: 20px;
