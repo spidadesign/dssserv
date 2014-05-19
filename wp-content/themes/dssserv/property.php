@@ -84,7 +84,8 @@ get_header();
 				</div>
 			</div>
 			<hr>
-			Share this listing on:
+			<div class="col-md-6 share">
+				Share this Listing on:
 				<!-- AddThis Button BEGIN -->
 				<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
 					<a class="addthis_button_preferred_1"></a>
@@ -93,6 +94,7 @@ get_header();
 				<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
 				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52b35f5a2a8b16b7"></script>
 				<!-- AddThis Button END -->
+			</div>
 		</div>
 	</div>
 </div>

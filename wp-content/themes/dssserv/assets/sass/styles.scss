@@ -161,3 +161,35 @@ body{
 	width: 340px;
 	height: 330px;
 }
+.addthis_32x32_style{
+	display: inline;
+	float: right;
+	margin-top: -23px;
+	a{
+		margin-left: 0;
+	}
+	.at15t_twitter{
+		background: url(../images/social/tw.png) no-repeat center center !important;
+		height:30px;
+		width: 30px;
+		background-position: 0 0 !important;
+		&:hover{
+			background: url(../images/social/tw-hover.png) no-repeat center center !important;
+		}
+	}
+	.at15t_facebook{
+		background: url(../images/social/fb.png) no-repeat center center !important;
+		height:30px;
+		width: 30px;
+		background-position: 0 0 !important;
+		&:hover{
+			background: url(../images/social/fb-hover.png) no-repeat center center !important;
+		}
+	}
+}
+.exc-img{
+	img{
+		width: 415px;
+		height: 415px;
+	}
+}

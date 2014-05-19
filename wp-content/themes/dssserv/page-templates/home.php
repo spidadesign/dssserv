@@ -30,19 +30,22 @@ get_header();
 			<h3 class="title">
 				Check out our Exclusive Properties you won't find elsewhere!
 			</h3>
+
+
 			<ul class="mid-page">
+				<?php $args = array('post_type' => 'exclusive');
+					$loop = new WP_Query( $args );
+					while ( $loop->have_posts() ) : $loop->the_post(); ?>
 				<li>
 					<div class="exc-img">
-						<img src="<?php bloginfo('template_directory'); ?>/assets/images/img.jpg">
-						<div class="pan_frame">&nbsp;</div>
+						<?php the_post_thumbnail('large'); ?>
+					<div class="pan_frame">&nbsp;</div>
+						<div class="exc-title">
+							<?php the_title(); ?>
+						</div>
 					</div>
 				</li>
-				<li>
-					<div class="exc-img">
-						<img src="<?php bloginfo('template_directory'); ?>/assets/images/img.jpg">
-						<div class="pan_frame">&nbsp;</div>
-					</div>
-				</li>
+				<?php endwhile;	?>
 			</ul>
 		</div>
 		<div class="col-md-5">

@@ -7662,25 +7662,32 @@ button.close {
   text-align: center;
   z-index: 9999;
   display: none;
-  padding-top: 40px;
 }
-/* line 50, ../sass/_header.scss */
+/* line 48, ../sass/_header.scss */
+.navbar.navbar-default ul.navbar-nav > li.menu .submenu.list {
+  right: -28px;
+}
+/* line 51, ../sass/_header.scss */
+.navbar.navbar-default ul.navbar-nav > li.menu .submenu.services {
+  right: -100px;
+}
+/* line 55, ../sass/_header.scss */
 .navbar.navbar-default ul.navbar-nav > li.menu .submenu ul li {
   padding-top: 2px;
   padding-bottom: 2px;
 }
-/* line 53, ../sass/_header.scss */
+/* line 58, ../sass/_header.scss */
 .navbar.navbar-default ul.navbar-nav > li.menu .submenu ul li:hover {
   background-color: #ccd9e5;
   padding-top: 2px;
   padding-bottom: 2px;
   border-radius: 3px;
 }
-/* line 58, ../sass/_header.scss */
+/* line 63, ../sass/_header.scss */
 .navbar.navbar-default ul.navbar-nav > li.menu .submenu ul li:hover a {
   color: #fff;
 }
-/* line 64, ../sass/_header.scss */
+/* line 69, ../sass/_header.scss */
 .navbar.navbar-default ul.navbar-nav > li.menu .submenu a {
   font-size: 16px;
   text-decoration: none;
@@ -7689,20 +7696,20 @@ button.close {
   margin-right: 7px;
   margin-left: 7px;
 }
-/* line 72, ../sass/_header.scss */
+/* line 77, ../sass/_header.scss */
 .navbar.navbar-default ul.navbar-nav > li.menu .submenu ul {
   margin-left: -1000px;
 }
-/* line 74, ../sass/_header.scss */
+/* line 79, ../sass/_header.scss */
 .navbar.navbar-default ul.navbar-nav > li.menu .submenu ul li {
   display: inline-block;
   float: right;
 }
-/* line 81, ../sass/_header.scss */
+/* line 86, ../sass/_header.scss */
 .navbar.navbar-default ul.navbar-nav > li.menu:hover .submenu {
   display: block;
 }
-/* line 86, ../sass/_header.scss */
+/* line 91, ../sass/_header.scss */
 .navbar.navbar-default ul.navbar-nav > li > a {
   color: #606060;
   text-transform: uppercase;
@@ -7711,11 +7718,11 @@ button.close {
   margin-right: 7px;
   margin-left: 7px;
 }
-/* line 95, ../sass/_header.scss */
+/* line 100, ../sass/_header.scss */
 .navbar.navbar-default ul.navbar-nav > li > a:hover .submenu {
   display: block;
 }
-/* line 100, ../sass/_header.scss */
+/* line 105, ../sass/_header.scss */
 .navbar.navbar-default ul.navbar-nav > li > .dropdown-menu {
   margin-top: 11px;
 }
@@ -8034,6 +8041,13 @@ a {
 /* line 291, ../sass/_property.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-close:hover {
   background: url(../images/close-hover.png) no-repeat center center;
+}
+
+/* line 296, ../sass/_property.scss */
+.share {
+  color: #b5b1a9;
+  font-size: 12px;
+  font-family: Georgia, Times, "Times New Roman", serif !important;
 }
 
 /* line 1, ../sass/_footer.scss */
@@ -8382,4 +8396,43 @@ a.active {
   top: 0;
   width: 340px;
   height: 330px;
+}
+
+/* line 164, ../sass/styles.scss */
+.addthis_32x32_style {
+  display: inline;
+  float: right;
+  margin-top: -23px;
+}
+/* line 168, ../sass/styles.scss */
+.addthis_32x32_style a {
+  margin-left: 0;
+}
+/* line 171, ../sass/styles.scss */
+.addthis_32x32_style .at15t_twitter {
+  background: url(../images/social/tw.png) no-repeat center center !important;
+  height: 30px;
+  width: 30px;
+  background-position: 0 0 !important;
+}
+/* line 176, ../sass/styles.scss */
+.addthis_32x32_style .at15t_twitter:hover {
+  background: url(../images/social/tw-hover.png) no-repeat center center !important;
+}
+/* line 180, ../sass/styles.scss */
+.addthis_32x32_style .at15t_facebook {
+  background: url(../images/social/fb.png) no-repeat center center !important;
+  height: 30px;
+  width: 30px;
+  background-position: 0 0 !important;
+}
+/* line 185, ../sass/styles.scss */
+.addthis_32x32_style .at15t_facebook:hover {
+  background: url(../images/social/fb-hover.png) no-repeat center center !important;
+}
+
+/* line 191, ../sass/styles.scss */
+.exc-img img {
+  width: 415px;
+  height: 415px;
 }
