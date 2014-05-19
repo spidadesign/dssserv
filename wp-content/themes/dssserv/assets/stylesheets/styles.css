@@ -8050,6 +8050,11 @@ a {
   font-family: Georgia, Times, "Times New Roman", serif !important;
 }
 
+/* line 304, ../sass/_property.scss */
+.exclusive-body img:hover {
+  background: url(../images/ex-hover.png) no-repeat center center;
+}
+
 /* line 1, ../sass/_footer.scss */
 .footer {
   height: 100px;

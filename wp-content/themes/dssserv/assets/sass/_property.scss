@@ -298,3 +298,11 @@ a{
 	font-size: 12px;
 	font-family: Georgia, Times, "Times New Roman", serif !important;
 }
+
+.exclusive-body{
+	img{
+		&:hover{
+			background: url(../images/ex-hover.png) no-repeat center center;
+		}
+	}
+}
