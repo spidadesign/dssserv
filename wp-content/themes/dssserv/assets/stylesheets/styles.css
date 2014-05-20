@@ -8054,6 +8054,13 @@ a {
 .exclusive-body img:hover {
   background: url(../images/ex-hover.png) no-repeat center center;
 }
+/* line 309, ../sass/_property.scss */
+.exclusive-body .row.title {
+  color: #336699;
+  font-size: 18px;
+  font-family: Georgia, Times, "Times New Roman", serif !important;
+  text-align: center;
+}
 
 /* line 1, ../sass/_footer.scss */
 .footer {

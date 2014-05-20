@@ -305,4 +305,12 @@ a{
 			background: url(../images/ex-hover.png) no-repeat center center;
 		}
 	}
+	.row{
+		&.title{
+			color:#336699;
+			font-size: 18px;
+			font-family: Georgia, Times, "Times New Roman", serif !important;
+			text-align: center;
+		}
+	}
 }
