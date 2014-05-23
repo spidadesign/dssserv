@@ -16,10 +16,10 @@ get_header();
 	</div>
 	<div class="breadcrumbs"></div>
 </div>
-	<div class='single-housing'>
-		<div class="pref"></div>
-	<div class="container">
-		<div class="col-md-6">
+<div class="single-housing">
+	<div class="pref beige"></div>
+		<div class="container">
+			<div class="col-md-6">
 	<?php
 	 $images =& get_children( array (
 	 		'post_parent' => $post->ID,
@@ -98,13 +98,13 @@ get_header();
 		</div>
 	</div>
 </div>
-<div class="modal fade" id="interested" tabindex="-1" role="dialog" aria-labelledby="interestedLabel" aria-hidden="true">
+<div class="modal fade interested" id="interested" tabindex="-1" role="dialog" aria-labelledby="interestedLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				<div class="modal-title" id="title">
-					<img src="<?php bloginfo('template_directory'); ?>/assets/images/modal-logo.png" alt="DSS Services">
+					<img src="<?php bloginfo('template_directory'); ?>/assets/images/logo-white.png" alt="DSS Services">
 					<h4>Request Apartment Information</h4>
 				<h3><span>call</span>1-212-369-9212</h3>
 				</div>

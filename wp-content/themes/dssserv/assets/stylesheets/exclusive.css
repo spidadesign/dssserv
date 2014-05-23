@@ -1,0 +1,21 @@
+/* line 1, ../sass/exclusive.scss */
+.exclusive {
+  font-family: Georgia, Times, "Times New Roman", serif !important;
+}
+/* line 3, ../sass/exclusive.scss */
+.exclusive .prop-desc {
+  background-image: url("../images/pattern-trans.png");
+  background-color: #454546;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+/* line 8, ../sass/exclusive.scss */
+.exclusive .prop-desc .title {
+  color: #f6f4f2;
+  font-size: 26px;
+}
+/* line 12, ../sass/exclusive.scss */
+.exclusive .prop-desc .content {
+  color: #dad5ca;
+  font-size: 16px;
+}

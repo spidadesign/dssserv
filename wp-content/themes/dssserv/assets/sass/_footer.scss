@@ -30,13 +30,32 @@
 	margin-left:auto;
 	margin-right:auto;
 	display:block;
+	.branding{
+		text-align: center;
+		color:#668cb3;
+		font-family: Georgia, Times, "Times New Roman", serif;
+		font-style: italic;
+		font-size: 30px;
+		span{
+			font-style: normal;
+			&.apt{
+				font-size: 30px;
+				display: block;
+				font-family: 'Knockout50Welterweight';
+			}
+			&.city{
+				display:inline;
+				font-size: 58px;
+			}
+		}
+	}
 
 }
-.home-contact, #interested{
+.home-contact, .interested{
 	color:#b5b1a9;
 	font-size: 14px;
 	text-transform: uppercase;
-	background: url(../images/bg-pattern.jpg);
+	background: url(../images/beige-bg.jpg);
 	padding-bottom: 35px;
 	padding-top: 45px;
 	.title{
@@ -139,10 +158,15 @@
 		}
 	}
 }
-.pref-beige{
-	background: url(../images/perforation-beige.png);
-	height: 6px;
-	width: 100%;
-	bottom: 49px;
+.pref{
+	bottom: 49px ;
 	position: relative;
+}
+.big-space{
+	height: 150px;
+	.pref{
+		&.white{
+			bottom: 4px;
+		}
+	}
 }

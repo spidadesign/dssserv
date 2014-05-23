@@ -25,16 +25,16 @@ get_header();
 		</div>
 	</div>
 </div>
-<div class="listings">
+<div class="listings property-search">
+	<div class="pref beige"></div>
 	<div class="container">
-	<div class="row top-bar">
-		<div class="col-md-1 number">#</div>
-		<div class="col-md-1 col-md-offset-4">Location</div>
-		<div class="col-md-1 col-md-offset-1">Bdrm</div>
-		<div class="col-md-1">Baths</div>
-		<div class="col-md-1 col-md-offset-1">Price</div>
-	</div>
-	<hr>
+		<div class="row top-bar">
+			<div class="col-md-1 number">#</div>
+			<div class="col-md-1 col-md-offset-4">Location</div>
+			<div class="col-md-1 col-md-offset-1">Bdrm</div>
+			<div class="col-md-1">Baths</div>
+			<div class="col-md-1 col-md-offset-1">Price</div>
+		</div>
 
 		<?php
 			if($_GET['borough'] === 'staten_island'):
@@ -56,14 +56,18 @@ get_header();
 					array('key' => 'random_8', 'value'=>'Exclusive', 'compare'=>'NOT LIKE')
 					)
 				);
+				
 			$loop = new WP_Query( $args );
+			$listingCount = $loop->post_count;
 			$count = 01;
 			while ( $loop->have_posts() ) : $loop->the_post();
 				$custom = get_post_custom(get_the_ID());
-				//print_r($custom);
-				//echo $GLOBALS['wp_query']->request;
-			?>
-			<div class="row individual">
+				if($count === $listingCount):
+					echo '<div class="row individual last">';
+				else:
+					echo '<div class="row individual">';
+				endif;
+				?>
 				<div class="col-md-1 number">
 					<div class="count">
 						<?php echo $count; ?>
@@ -81,9 +85,17 @@ get_header();
 						 	// no attachments here
 						else:
 							echo "<div class='small-gallery'>";
+								$imgCount = 1;
+								$args = array('class' => 'next-row attachment-thumbnail');
 							foreach ( $images as $attachment_id => $attachment ):
-								echo wp_get_attachment_image( $attachment_id, 'thumbnail' );
+								if($imgCount <= 3):
+									echo wp_get_attachment_image( $attachment_id, 'thumbnail' );
+								elseif($imgCount > 3):
+									//echo wp_get_attachment_image( $attachment_id, 'thumbnail', 1, $args );
+								endif;
+								$imgCount++;
 							endforeach;
+							$imgCount = 0;
 							echo "</div>";
 						endif;
 						?>
@@ -105,9 +117,11 @@ get_header();
 					<button type="button" class="btn btn-default"  data-toggle="collapse" data-target="#prop-<?php echo $count; ?>"></button>
 				</div>
 			</div>
-			<hr>
 			<div class="row prop-content">
+				
 				<div id="prop-<?php echo $count; ?>" class="collapse">
+					<div class="inner">
+					<div class="pref white"></div>
 					<div class="col-md-4">
 						 <?php
 							 	$images =& get_children( array (
@@ -135,6 +149,9 @@ get_header();
 								<?php endif; ?>
 					</div>
 					<div class="col-md-8">
+						<div class="row">
+							<hr class="col-md-2">
+						</div>
 						<div class="row top">
 							<div class="fl title">
 								<?php the_title(); ?>
@@ -146,11 +163,25 @@ get_header();
 						<div class="row bottom">
 							<?php the_excerpt(); ?>
 						</div>
+						<div class="row">
+							<hr class="share">
+							<div class="share">
+								Share this Listing on:
+								<!-- AddThis Button BEGIN -->
+								<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+									<a class="addthis_button_preferred_1"></a>
+									<a class="addthis_button_preferred_2"></a>
+								</div>
+									<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+									<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52b35f5a2a8b16b7"></script>
+									<!-- AddThis Button END -->
+							</div>	
+						</div>
 					</div>
 				</div>
 			</div>
-
-			<?php $count++; endwhile; ?>
+		</div>	
+		<?php $count++; endwhile; ?>
 	</div>
 </div>
 

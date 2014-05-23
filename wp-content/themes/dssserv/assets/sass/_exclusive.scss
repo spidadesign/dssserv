@@ -1,0 +1,37 @@
+.exclusive-body{
+	img{
+		&:hover{
+			background: url(../images/ex-hover.png) no-repeat center center;
+		}
+	}
+	.row{
+		&.title{
+			color:#336699;
+			font-size: 18px;
+			font-family: Georgia, Times, "Times New Roman", serif !important;
+			text-align: center;
+		}
+	}
+}
+.exclusive{
+	font-family: Georgia, Times, "Times New Roman", serif !important;
+	.prop-desc{
+		background-image: url('../images/pattern-trans.png');
+		background-color: #454546;
+		padding-top:50px;
+		padding-bottom: 50px;
+		.title{
+			color: #f6f4f2;
+			font-size: 26px;
+		}
+		.content{
+			color:#dad5ca;
+			font-size: 16px;
+		}
+	}
+	.pref{
+		position: absolute;
+		margin-top: -3px;
+		bottom:auto;
+	}
+}

@@ -47,46 +47,35 @@
 						<div class="navbar-collapse collapse">
 							<ul class="nav navbar-nav navbar-right">
 								<li><a href="<?php echo site_url(); ?>/property-search">Property Search</a></li>
-								<li class="menu"><a>List With Us</a>
-									<div class="submenu list">
-										<div class="container">
-											<ul>
-												<li><a href="<?php echo site_url();?>/rentals">Rentals</a></li>
-												<li><a href="<?php echo site_url();?>/sales">Sales</a></li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li class="menu"><a>Services</a>
-									<div class="submenu services">
-										<div class="container">
-											<ul>
-												<li><a href="<?php echo site_url();?>/property-management">Property Management</a></li>
-												<li><a href="<?php echo site_url();?>/insurance">Insurance</a></li>
-											</ul>
-										</div>
-									</div>
-								</li>
-								<li class="menu"><a>Resources</a>
-									<div class="submenu">
-										<div class="container">
-											<ul>
-												<li><a href="<?php echo site_url();?>/neighborhood-guide">Neighborhood Guide</a></li>
-												<li><a href="<?php echo site_url();?>/mortgage-guide">Mortgage Guide</a></li>
-												<li><a href="<?php echo site_url();?>/sellers-guide">Seller's Guide</a></li>
-												<li><a href="<?php echo site_url();?>/renters-guide">Renter's Guide</a></li>
-											</ul>
-										</div>
-									</div>
-								</li>
+								<li id="list-link"><a>List With Us</a></li>
+								<li><a id="services-link">Services</a></li>
+								<li><a id="resources-link">Resources</a></li>
 								<li><a href="<?php echo site_url();?>/about-us">About</a></li>
 								<li><a href="#" data-toggle="modal" data-target="#contact">Contact</a></li>
 							</ul>
 						</div>
 					</div>
-					<hr>
 				</div>
 			</div><!--/.nav-collapse -->
+			<div class="submenu">
+							
+				<div class="container">
+				<ul id="list">
+					<li><a href="<?php echo site_url();?>/rentals">Rentals</a></li>
+					<li><a href="<?php echo site_url();?>/sales">Sales</a></li>
+				</ul>
+				<ul id="services">
+					<li><a href="<?php echo site_url();?>/property-management">Property Management</a></li>
+					<li><a href="<?php echo site_url();?>/insurance">Insurance</a></li>
+				</ul>
+				<ul id="resources">
+					<li><a href="<?php echo site_url();?>/neighborhood-guide">Neighborhood Guide</a></li>
+					<li><a href="<?php echo site_url();?>/mortgage-guide">Mortgage Guide</a></li>
+					<li><a href="<?php echo site_url();?>/sellers-guide">Seller's Guide</a></li>
+					<li><a href="<?php echo site_url();?>/renters-guide">Renter's Guide</a></li>
+				</ul>
+			</div>
+		</div
 		</div><!--/.container-fluid -->
 	</div>
 

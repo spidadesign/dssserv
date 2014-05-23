@@ -1,8 +1,22 @@
-		<div class="logo-divider"></div>
-		<div class="city"></div>
+	<?php //if
+		$curr_page = get_post();
+		if($curr_page->ID === 5):
+			echo '<div class="logo-divider"></div>';
+		else:
+			echo '<div class="big-space"><div class="pref white"></div></div>';
+		endif;
+		?>
+		<div class="city">
+			<?php if($curr_page->ID !== 5): ?>
+			<div class="branding">
+				<img src="<?php bloginfo('template_directory'); ?>/assets/images/logo-blue.png" alt="DSS Services">
+				<span class="apt">Apartments</span> in <span class="city">New York</span>
+			</div>
+			<?php endif; ?>
+		</div>
 
 		<div class="home-contact">
-		<div class="pref-beige"></div>
+		<div class="pref beige"></div>
 			<div class="container">
 				<div class="col-md-3 col-md-offset-5">
 					<span class="text-center title">Contact Us</span>
@@ -79,8 +93,21 @@
 					  theme: 'default',
 					  clickOverlayToClose: true,
 				 });
-
 			});
 		</script>
+		<script>
+			$( "#list-link" ).hover(function() {
+				$( "#list" ).toggle();
+				$(".submenu").toggle();
+			});
+			$( "#services-link" ).hover(function() {
+				$( "#services" ).toggle();
+				$(".submenu").toggle();
+			});
+			$( "#resources-link" ).hover(function() {
+				$( "#resources" ).toggle();
+				$(".submenu").toggle();
+			});
+</script>
 	</body>
 </html>

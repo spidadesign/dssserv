@@ -1,0 +1,18 @@
+.static-page{
+	font-family: Georgia, Times, "Times New Roman", serif !important;
+	.pref{
+		bottom: 3px;
+	}
+	.content{
+		background: url(../images/beige-bg.jpg);
+		h2{
+			color: #336699;
+			font-size: 18px;
+		}
+		p{
+			float:left;
+			&:last-child{
+			}
+		}
+	}
+}

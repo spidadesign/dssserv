@@ -4,6 +4,8 @@
 @import "bootstrap";
 @import "header";
 @import "property";
+@import "exclusive";
+@import "static-page";
 @import "footer";
 
 body{
@@ -28,16 +30,43 @@ body{
 	max-width:940px;
 }
 .top-home{
+	position:relative;
+	top:-170px;
+	.pref{
+			bottom: -2px;
+			position: absolute;
+	}
+	&.container{
+		padding-left: 0;
+		padding-right: 0;
+		width:100%;
+		max-width: 100%;
+	}
 	.top-overlay{
-		background: url(../images/pattern.png) no-repeat;
-		overflow: hidden;
-		position: absolute;
-		height: 572px;
-		width: 100%;
-		bottom: 186px;
+		//background: url(../images/pattern.png) no-repeat;
+		background-image: url('../images/pattern-trans.png');
+		//background-color: rgba(51, 102, 153, 0.5);
+		  /* Safari 4-5, Chrome 1-9 */
+		  background: -webkit-gradient(linear, left top, right top, from(rgba(51, 102, 153, 0.5)), to(rgba(51, 102, 153, 0.0)));
+		  
+		  /* Safari 5.1, Chrome 10+ */
+		  background: -webkit-linear-gradient(left, rgba(51, 102, 153, 0.5), rgba(51, 102, 153, 0.0));
+
+		  /* Firefox 3.6+ */
+		  background: -moz-linear-gradient(left, rgba(51, 102, 153, 0.5), rgba(51, 102, 153, 0.0));
+
+		  /* IE 10 */
+		  background: -ms-linear-gradient(left, rgba(51, 102, 153, 0.5), rgba(51, 102, 153, 0.0));
+
+		  /* Opera 11.10+ */
+		  background: -o-linear-gradient(left, rgba(51, 102, 153, 0.5), rgba(51, 102, 153, 0.0));
+		  overflow: hidden;
+		  position: absolute;
+		  height: 100%;
+		  width: 100%;
+		  top:0;
 	}
 	.bx-wrapper{
-		top:-170px;
 		z-index: 0;
 		margin:0 auto 0;
 		.bx-pager{
@@ -91,19 +120,22 @@ body{
 	}
 }
 .pref{
-	background: url(../images/perforation.png);
+	&.white{
+		background: url(../images/perforation-white.png);
+	}
+	&.beige{
+		background: url(../images/perforation-beige.png);	
+	}
 	height: 6px;
 	width: 100%;
-	bottom: 193px;
-	position: absolute;
 }
 .middle-home{
-	background: url(../images/bg-pattern.jpg);
-	margin-top: -145px;
+	background: url(../images/beige-bg.jpg);
+	margin-top: -170px;
 	padding-top: 40px;
-	padding-bottom:80px;
+	padding-bottom:40px;
 	.line{
-		border-bottom: black 2px solid;
+		border-bottom: 2px solid #b4c2cf;
 	}
 	h3{
 		&.title{
@@ -111,6 +143,7 @@ body{
 			font-family: Georgia, Times, "Times New Roman", serif !important;
 			text-align: center;
 			font-size: 26px;
+			max-width: 414px;
 		}
 	}
 	.exc-img{
@@ -150,6 +183,11 @@ body{
 	}
 	.pref{
 		position: relative;
+		bottom: 2px;
+	}
+	hr{
+		margin-top: 50px;
+		margin-bottom: 50px;
 	}
 }
 
