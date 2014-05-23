@@ -59,7 +59,7 @@ get_header();
 	</div>
 </div>
 <div class="bottom-home">
-<div class="pref"></div>
+<!--<div class="pref"></div>-->
 	<div class="container">
 		<div class="col-md-12">
 			<div class="content">

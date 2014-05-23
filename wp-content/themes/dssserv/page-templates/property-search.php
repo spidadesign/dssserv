@@ -52,7 +52,8 @@ get_header();
 				'posts_per_page' => 10,
 				'meta_query' => array(
 					array('key' => 'borough', 'value' => $borough, 'compare' => 'LIKE'),
-					array('key' => 'random_219', 'value'=> $type, 'compare' => 'LIKE')
+					array('key' => 'random_219', 'value'=> $type, 'compare' => 'LIKE'),
+					array('key' => 'random_8', 'value'=>'Exclusive', 'compare'=>'NOT LIKE')
 					)
 				);
 			$loop = new WP_Query( $args );
