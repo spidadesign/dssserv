@@ -23,6 +23,7 @@
 		background-color: rgba(255, 255, 255, 0.9);
 		.navbar-collapse{
 			border-color: rgba(255, 255, 255, 0.9);
+			border-bottom: 1px solid rgba(138, 132, 134, 0.5);
 		}
 		.row{
 			margin-left: 15px;
@@ -40,7 +41,7 @@
 					border-bottom: 3px transparent solid;
 					height: 36px;
 					a{
-						
+
 					}
 					&:hover{
 							border-top: 3px $dark-blue solid;
@@ -125,20 +126,17 @@
 	background-color: rgba(255, 255, 255, 0.9);
 	display:none;
 	min-height: 40px;
-	hr{
-		border-top: 1px solid rgba(138, 132, 134, 0.5);
-		margin: 0;
-	}
 	ul{
 		display:none;
-		float:right;
 		list-style-type: none;
 		width: 100%;
+		padding-top: 10px;
+		float:left;
 		>li{
 			padding-top: 5px;
 			padding-bottom: 2px;
 			display:inline;
-			float:left;
+			float: right;
 			&:hover{
 				background-color: #ccd9e5;
 				padding-top: 5px;
@@ -161,9 +159,9 @@
 	#list, #services, #resources{
 		&:hover{
 			display: block !important;
-		}	
+		}
 	}
 	&:hover{
-		display: block !important; 
+		display: block !important;
 	}
 }

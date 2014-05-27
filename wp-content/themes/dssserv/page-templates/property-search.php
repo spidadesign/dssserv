@@ -17,11 +17,11 @@ get_header();
 			<a class="btn btn-default" href="?type=sale">Sale</a>
 		<div class="fr">
 			Select Area:
-			<a type="button" class="btn btn-default" href="?borough=manhattan">Manhattan</a>
-			<a type="button" class="btn btn-default" href="?borough=bronx">Bronx</a>
-			<a type="button" class="btn btn-default" href="?borough=brooklyn">Brooklyn</a>
-			<a type="button" class="btn btn-default" href="?borough=queens">Queens</a>
-			<a type="button" class="btn btn-default" href="?borough=staten_island">Staten Island</a>
+			<a type="button" class="btn btn-default b-name" href="?borough=manhattan">Manhattan</a>
+			<a type="button" class="btn btn-default b-name" href="?borough=bronx">Bronx</a>
+			<a type="button" class="btn btn-default b-name" href="?borough=brooklyn">Brooklyn</a>
+			<a type="button" class="btn btn-default b-name" href="?borough=queens">Queens</a>
+			<a type="button" class="btn btn-default b-name" href="?borough=staten_island">Staten Island</a>
 		</div>
 	</div>
 </div>
@@ -32,7 +32,7 @@ get_header();
 			<div class="col-md-1 number">#</div>
 			<div class="col-md-1 col-md-offset-4">Location</div>
 			<div class="col-md-1 col-md-offset-1">Bdrm</div>
-			<div class="col-md-1">Baths</div>
+			<div class="col-md-1 bath-nav">Baths</div>
 			<div class="col-md-1 col-md-offset-1">Price</div>
 		</div>
 
@@ -51,33 +51,39 @@ get_header();
 				'post_type' => 'property',
 				'posts_per_page' => 10,
 				'meta_query' => array(
-					array('key' => 'borough', 'value' => $borough, 'compare' => 'LIKE'),
-					array('key' => 'random_219', 'value'=> $type, 'compare' => 'LIKE'),
-					array('key' => 'random_8', 'value'=>'Exclusive', 'compare'=>'NOT LIKE')
+					array('key' => 'borough', 'value' => $borough, 'compare'   => 'LIKE'),
+					array('key' => 'random_219', 'value'=> $type, 'compare'    => 'LIKE'),
+					array('key' => 'random_8', 'value'=>'Exclusive', 'compare' => 'NOT LIKE')
 					)
 				);
-				
+
 			$loop = new WP_Query( $args );
 			$listingCount = $loop->post_count;
-			$count = 01;
+			$count = 1;
 			while ( $loop->have_posts() ) : $loop->the_post();
 				$custom = get_post_custom(get_the_ID());
 				if($count === $listingCount):
-					echo '<div class="row individual last">';
+					echo '<div class="row individual last" data-toggle="collapse" data-target="#prop-'.$count.'">';
 				else:
-					echo '<div class="row individual">';
+					echo '<div class="row individual" data-toggle="collapse" data-target="#prop-'.$count.'">';
 				endif;
 				?>
 				<div class="col-md-1 number">
 					<div class="count">
-						<?php echo $count; ?>
+						<?php
+							if($count < 10):
+								echo '0'.$count;
+							else:
+								echo $count;
+							endif;
+						?>
 					</div>
 				</div>
 				<div class="col-md-4">
 					 <?php
 					 	$images =& get_children( array (
-					 		'post_parent' => $post->ID,
-					 		'post_type' => 'attachment',
+					 		'post_parent'    => $post->ID,
+					 		'post_type'      => 'attachment',
 					 		'post_mime_type' => 'image'
 					 		));
 
@@ -107,7 +113,7 @@ get_header();
 				<div class="col-md-1 col-md-offset-1">
 					<?php echo $custom['bedrooms'][0]; ?>
 				</div>
-				<div class="col-md-1">
+				<div class="col-md-1 bath">
 					<?php echo $custom['bathrooms'][0]; ?>
 				</div>
 				<div class="col-md-1 col-md-offset-1">
@@ -118,8 +124,8 @@ get_header();
 				</div>
 			</div>
 			<div class="row prop-content">
-				
-				<div id="prop-<?php echo $count; ?>" class="collapse">
+
+				<div id="prop-<?php echo $count; ?>" class="collapse single-prop">
 					<div class="inner">
 					<div class="pref white"></div>
 					<div class="col-md-4">
@@ -175,12 +181,12 @@ get_header();
 									<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
 									<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52b35f5a2a8b16b7"></script>
 									<!-- AddThis Button END -->
-							</div>	
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 		<?php $count++; endwhile; ?>
 	</div>
 </div>

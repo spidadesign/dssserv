@@ -67,6 +67,7 @@ a{
 		border-bottom: 1px solid rgba(51, 102, 153, 0.2);
 		padding-bottom: 15px;
 		padding-top:50px;
+		text-transform: uppercase;
 	}
 	hr{
 		border-top: 2px solid rgba(51, 102, 153, 0.5);
@@ -77,14 +78,21 @@ a{
 		padding-left: 30px;
 	}
 	.individual{
-		padding-top: 10px;
+		padding-top: 25px;
 		padding-bottom: 10px;
 		border-top: 1px solid rgba(51, 102, 153, 0.2);
+		min-height:81px;
 		&.last{
 			border-bottom: 1px solid rgba(51, 102, 153, 0.2);
 		}
 		&:hover{
 			background-color:#dfe4e7;
+		}
+		&.selected{
+			background-color:#dfe4e7;
+			&:hover{
+				background-color:#ccd9e5;
+			}
 		}
 	}
 	button{
@@ -99,12 +107,21 @@ a{
 					color:transparent;
 					border-color:transparent;
 				}
+				&.selected{
+					background: url(../images/prop-close.png) no-repeat center center;
+					height: 40px;
+					width: 40px;
+					&:hover{
+						background: url(../images/prop-close-hover.png) no-repeat center center;
+					}
+				}
 			}
 		}
 	}
 }
 
 .small-gallery{
+	margin-top: -15px;
 	img{
 		margin-left:10px;
 		&.next-row{
@@ -165,6 +182,43 @@ a{
 }
 
 .single-property{
+	.interested{
+		.text{
+			padding-top: 30px;
+		}
+		.row{
+			label{
+				bottom: auto;
+			}
+			input{
+				height:40px;
+				margin-left:20px !important;
+				font-size:14px;
+				color: #336699;
+				text-transform: uppercase;
+				&[type="submit"]{
+					&.wpcf7-submit{
+						margin-left:-30px !important;
+						bottom: 20px;
+						background-color: transparent;
+						color: #336699;
+						border-bottom: 3px solid #336699;
+						border-top: 3px solid #336699;
+						border-radius: 0;
+					}
+				}
+			}
+		}
+		textarea{
+			background: url(../images/textarea-bg.jpg);
+			line-height: 31px;
+			margin-bottom:0;
+			font-size:14px;
+			color: #336699;
+			text-transform: uppercase;
+		}
+	}
+
 	hr{
 		border-top: 1px solid #dad5ca;
 	}
@@ -231,6 +285,10 @@ a{
 		width: 415px;
 	}
 	.modal{
+
+		.pref{
+			bottom: 4px;
+		}
 		.modal-header{
 			background: url(../images/modal-bg.jpg) no-repeat center center;
 			height:250px;
@@ -260,13 +318,21 @@ a{
 			}
 			button{
 				&.close{
-					background: url(../images/close.png) no-repeat center center;
+					background: url(../images/modal-close.png) no-repeat center center;
 					height: 60px;
 					width: 60px;
+					&:hover{
+						background: url(../images/modal-close-hover.png) no-repeat center center;
+					}
 				}
 			}
 		}
 		.modal-body{
+			background-image: url('../images/modal-form-bg.png');
+			background-repeat: no-repeat;
+			background-position: 13px 0;
+			padding-bottom: 0;
+			height: 310px;
 			p{
 				text-align: center;
 				color:#336699;
@@ -289,6 +355,7 @@ a{
 	}
 	.modal-content{
 		border-radius: 0;
+		background: url(../images/beige-bg.jpg);
 	}
 	.bx-wrapper, .bx-viewport{
 		width: 424px !important;
@@ -361,5 +428,6 @@ a{
 	font-size: 12px;
 	font-family: Georgia, Times, "Times New Roman", serif !important;
 }
-
-
+.sort{
+	background-color:#ccd9e5;
+}

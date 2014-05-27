@@ -30,15 +30,63 @@
 		.title{
 			color: #f6f4f2;
 			font-size: 26px;
+			margin-bottom: 20px;
+			}
+		}
+		.listings{
+			.title{
+				color: #336699;
+				font-size: 18px;
+				margin-top:40px;
+				}
+			}
+		.prop-content{
+
+			.share{
+				float:none;
+			}
+			.title{
+				color: #454546 !important;
+				margin-top: 0;
+			}
+			.inner{
+				.pref{
+					position: relative;
+					margin-top: 0;
+				}
+			}
 		}
 		.content{
 			color:#dad5ca;
 			font-size: 16px;
+			p{
+				line-height: 25px;
+			}
 		}
-	}
 	.pref{
 		position: absolute;
 		margin-top: -3px;
 		bottom:auto;
+	}
+	.number{
+		color: #b5b1a9;
+	}
+	.addthis_32x32_style{
+		margin-top: -8px;
+	}
+	.contact{
+		font-size: 14px;
+		font-family: 'Knockout50Welterweight';
+		span{
+			text-transform: uppercase;
+		}
+	}
+	a{
+		&.btn{
+			&.btn-primary{
+				font-family: 'Knockout50Welterweight';
+				text-transform: uppercase;
+			}
+		}
 	}
 }

@@ -102,21 +102,20 @@ get_header();
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
 				<div class="modal-title" id="title">
 					<img src="<?php bloginfo('template_directory'); ?>/assets/images/logo-white.png" alt="DSS Services">
 					<h4>Request Apartment Information</h4>
 				<h3><span>call</span>1-212-369-9212</h3>
 				</div>
 			</div>
+			<div class="pref beige"></div>
 			<div class="modal-body">
-				<?php //echo "<pre>"; print_r($custom); echo "</pre>"; ?>
 				<p>I am interested in <span><?php the_title(); ?></span> at <span><?php echo $custom['location'][0]; ?></span></p>
 				<div class="col-md-2 col-md-offset-5"><hr></div>
 				<?php echo do_shortcode(apply_filters("the_content", '[contact-form-7 id="45" title="Property Information"]')); ?>
 			</div>
-			<div class="modal-footer">
-			</div>
+
 		</div>
 	</div>
 </div>

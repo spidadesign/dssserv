@@ -59,6 +59,10 @@
 	background: url(../images/beige-bg.jpg);
 	padding-bottom: 35px;
 	padding-top: 45px;
+	.container{
+		background: url(../images/home-form-bg.png) no-repeat center center;
+		min-height: 335px;
+	}
 	.title{
 		color:#336699;
 		font-family: Georgia, Times, "Times New Roman", serif !important;
@@ -73,6 +77,11 @@
 		font-family: Georgia, Times, "Times New Roman", serif !important;
 		font-size: 14px;
 		font-style: italic;
+		a{
+			color:#8f8d88;
+			text-decoration: underline;
+			margin-left: auto;
+		}
 	}
 	.row{
 		border-bottom: 1px solid #d4d1cb;
@@ -163,6 +172,9 @@
 	background-color: #8b8985;
 	background: none;
 	background-image: url('../images/pattern-trans.png');
+	.modal-footer{
+		border:none;
+	}
 }
 .pref{
 	bottom: 49px ;

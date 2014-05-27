@@ -74,44 +74,84 @@
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/bootstrap/collapse.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/bootstrap/transition.js"></script>
 		<script>
-			$(document).ready(function(){
+			$(document).ready(function() {
 				$('.top-slider').bxSlider({
-					controls:false,
+					controls: false,
 					captions: true,
 				});
 				$('.mid-page').bxSlider({
-					controls:false,
+					controls: false,
 				});
 				$('.collapse-content').bxSlider({
-					controls:false,
+					controls: false,
 				});
 				$('.single-listing').bxSlider({
-					controls:false,
+					controls: false,
 				});
-				 $('.lightbox-gallery').nivoLightbox({
-					  effect: 'fade',
-					  theme: 'default',
-					  clickOverlayToClose: true,
-				 });
-				 if ($(this).hasClass('in')) {
-					 $(this).parent().addClass('active');
-					}
+				$('.lightbox-gallery').nivoLightbox({
+					effect: 'fade',
+					theme: 'default',
+					clickOverlayToClose: true,
+				});
+				if ($(this).hasClass('in')) {
+					$(this).parent().addClass('active');
+				}
 			});
-		</script>
-		<script>
-			$( "#list-link" ).hover(function() {
-				$( "#list" ).toggle();
+			$("#list-link").hover(function() {
+				$("#list").toggle();
 				$(".submenu").toggle();
 			});
-			$( "#services-link" ).hover(function() {
-				$( "#services" ).toggle();
+			$("#services-link").hover(function() {
+				$("#services").toggle();
 				$(".submenu").toggle();
 			});
-			$( "#resources-link" ).hover(function() {
-				$( "#resources" ).toggle();
+			$("#resources-link").hover(function() {
+				$("#resources").toggle();
 				$(".submenu").toggle();
 			});
-			
+
+			$('.collapse.single-prop').on('show.bs.collapse', function() {
+				var $openTarget = "#" + $(this).attr('id');
+				$("button, .individual").removeClass("selected");
+				$('.collapse.single-prop.in').collapse('hide');
+
+				if($("[data-target='" + $openTarget + "']")){
+					$("button[data-target='" + $openTarget + "']").addClass("selected");
+				}
+				$(".selected").parent().parent().addClass("selected");
+			});
+			$("button").click(function() {
+				$(this).removeClass("selected");
+				$(".individual").removeClass("selected");
+			});
+			$(".individual").hasClass("collapsed", function(){
+				$(this).find("button").removeClass("selected");
+			});
+
+			var click = 0;
+			$(".bath-nav").click(function(){
+				click = ++click;
+				if(click%3 === 0){
+					$(this).removeClass("sort");
+					$(".bath").removeClass("sort");
+				}
+				else{
+					$(this).addClass("sort");
+					$(".bath").addClass("sort");
+				}
+
+			});
 </script>
+		<?php
+			$curr_page = get_post();
+			if($curr_page->ID == 18):
+		?>
+			<script>
+				var borough = $(".b-name").html().toLowerCase();
+				$('.b-name').filter(function () {
+					return $(this).text().toLowerCase() === "<?php echo $_GET['borough']; ?>";
+				}).addClass('active');
+			</script>
+		<?php endif; ?>
 	</body>
 </html>

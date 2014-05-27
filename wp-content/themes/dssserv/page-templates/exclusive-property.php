@@ -24,13 +24,13 @@ get_header();
 						'meta_query' => array(
 							//array('key' => 'random_219', 'value'=> $type, 'compare' => 'LIKE'),
 							array('key' => 'random_8', 'value'=>'Exclusive', 'compare'=>'LIKE')
-							
+
 							)
 						);
 					$loop = new WP_Query( $args );
 					while ( $loop->have_posts() ) : $loop->the_post();
 						$id = get_the_ID();
-					?>	
+					?>
 					<div class="col-md-4">
 						<?php echo the_post_thumbnail('large'); ?>
 					</div>
@@ -42,30 +42,30 @@ get_header();
 							<?php the_content(); ?>
 						</div>
 					</div>
-					<?php 
-						endwhile; 
+					<?php
+						endwhile;
 						unset($args);
 						unset($loop);
 					?>
 			</div>
 		</div>
 	</div>
-		
+
 
 <div class="listings">
 	<div class="container">
-	<div class="title">
-				Current Properties
-			</div>
-	<div class="row top-bar">
-		<div class="col-md-1 number">#</div>
-		<div class="col-md-1">Unit</div>
-		<div class="col-md-1">Bdrm</div>
-		<div class="col-md-1">Baths</div>
-		<div class="col-md-1">Price</div>
-	</div>
+		<div class="title">
+			Current Properties
+		</div>
+		<div class="row top-bar">
+			<div class="col-md-1 number">#</div>
+			<div class="col-md-1">Unit</div>
+			<div class="col-md-1">Bdrm</div>
+			<div class="col-md-1">Baths</div>
+			<div class="col-md-1 col-md-offset-1">Price</div>
+		</div>
 
-				<?php 
+			<?php
 				$parentTitle = get_the_title();
 				$currPropID = $id;
 				$args = array(
@@ -76,16 +76,28 @@ get_header();
 					array('key' => 'random_8', 'value'=>'Exclusive', 'compare'=>'LIKE')
 					)
 				);
-				wp_reset_query();
+
+			wp_reset_query();
 			$loop = new WP_Query( $args );
-			$count = 01;
+			$listingCount = $loop->post_count;
+			$count = 1;
 			while ( $loop->have_posts() ) : $loop->the_post();
 				$custom = get_post_custom(get_the_ID());
-			?>
-			<div class="row individual" data-toggle="collapse" data-target="#prop-<?php echo $count; ?>">
+			if($count === $listingCount):
+					echo '<div class="row individual last" data-toggle="collapse" data-target="#prop-'.$count.'">';
+				else:
+					echo '<div class="row individual" data-toggle="collapse" data-target="#prop-'.$count.'">';
+				endif;
+				?>
 				<div class="col-md-1 number">
 					<div class="count">
-						<?php echo $count; ?>
+						<?php
+							if($count < 10):
+								echo '0'.$count;
+							else:
+								echo $count;
+							endif;
+						?>
 					</div>
 				</div>
 				<div class="col-md-1">
@@ -97,15 +109,17 @@ get_header();
 				<div class="col-md-1">
 					<?php echo $custom['bathrooms'][0]; ?>
 				</div>
-				<div class="col-md-1 ">
+				<div class="col-md-1 col-md-offset-1">
 					$<?php echo $custom['price'][0]; ?>
 				</div>
-				<div class="col-md-1 col-md-offset-6">
+				<div class="col-md-1 col-md-offset-5">
 					<button type="button" class="btn btn-default"  data-toggle="collapse" data-target="#prop-<?php echo $count; ?>"></button>
 				</div>
 			</div>
 			<div class="row prop-content">
-				<div id="prop-<?php echo $count; ?>" class="collapse">
+				<div id="prop-<?php echo $count; ?>" class="collapse single-prop">
+					<div class="inner">
+					<div class="pref white"></div>
 					<div class="col-md-4">
 						 <?php
 							 	$images =& get_children( array (
@@ -124,9 +138,9 @@ get_header();
 											?>
 
 												<li style="width:100%">
-													<a href="<?php echo $image[0];?>" 
-														class="lightbox-gallery" 
-														data-lightbox-gallery="gallery<?php echo $count; ?>" 
+													<a href="<?php echo $image[0];?>"
+														class="lightbox-gallery"
+														data-lightbox-gallery="gallery<?php echo $count; ?>"
 														title="Apartment <?php the_title();?>">
 															<?php echo wp_get_attachment_image( $attachment_id, 'medium' ); ?>
 													</a>
@@ -136,46 +150,46 @@ get_header();
 								<?php endif; ?>
 					</div>
 					<div class="col-md-8">
+						<div class="row">
+							<hr class="col-md-2">
+						</div>
 						<div class="row top">
 							<div class="fl title">
 								Apartment <?php the_title(); ?>
 							</div>
 							<div class="fr">
 								<a type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#interested<?php echo $count; ?>">
-									Interested in this apartment
+									Interested in this apartment?
 								</a>
 							</div>
 						</div>
 						<div class="row bottom">
-							<?php the_content(); 
-								
-								//echo "<pre>"; print_r($loop); echo "</pre>";
-							?>
+							<?php the_content();?>
 						</div>
 						<div class="row">
-							<div class="fr contact">
-								Interested? Click to email us, or call 1-212-369-9212
-							</div>
-						</div>
-						<hr><br>
-						<div class="col-md-6 share">
-							Share this Listing on:
-							<!-- AddThis Button BEGIN -->
-							<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-								<a 
-									class="addthis_button_preferred_1"
-									addthis:url="<?php echo the_permalink();?>"
-									addthis:title="Check out Apartment <?php the_title(); ?> at <?php echo $parentTitle; ?>"
+							<hr class="share">
+							<div class="share">
+								<div class="col-md-5">
+								Share this Listing on:
+								<!-- AddThis Button BEGIN -->
+								<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+									<a
+										class="addthis_button_preferred_2"
+										addthis:url="<?php echo the_permalink();?>"
+										addthis:title="Check out Apartment <?php the_title(); ?> at <?php echo $parentTitle; ?>"
 									></a>
-								<a 
-									class="addthis_button_preferred_2"
-									addthis:url="<?php echo the_permalink();?>"
-									addthis:title="Check out Apartment <?php the_title(); ?> at <?php echo $parentTitle; ?>"
-								></a>
+									<a
+										class="addthis_button_preferred_1"
+										addthis:url="<?php echo the_permalink();?>"
+										addthis:title="Check out Apartment <?php the_title(); ?> at <?php echo $parentTitle; ?>"
+										></a>
+
+								</div>
+								<script type="text/javascript">var addthis_config = {};</script>
+								<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52b35f5a2a8b16b7"></script>
+								<!-- AddThis Button END -->
+								</div>
 							</div>
-							<script type="text/javascript">var addthis_config = {};</script>
-							<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52b35f5a2a8b16b7"></script>
-							<!-- AddThis Button END -->
 						</div>
 					</div>
 				</div>
@@ -203,6 +217,7 @@ get_header();
 	</div>
 </div>
 	</div>
+			</div>
 			<?php $count++; endwhile; ?>
 	</div>
 </div>

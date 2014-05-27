@@ -5,14 +5,15 @@
 	}
 	.content{
 		background: url(../images/beige-bg.jpg);
+		padding:50px 0 50px 0;
+		color: #336699;
+		font-size: 15px;
 		h2{
 			color: #336699;
 			font-size: 18px;
-		}
-		p{
-			float:left;
-			&:last-child{
-			}
+			margin-top:0;
+			margin-bottom: 15px;
+			text-transform: uppercase;
 		}
 	}
 }
