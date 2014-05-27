@@ -147,11 +147,12 @@ body{
 		}
 	}
 	.exc-img{
+		width: 415px;
 		height: 330px;
-		width: 340px;
 	}
 	.bx-wrapper{
-		max-width:430px !important;
+		max-width: 430px !important;
+		height: 370px;
 		.bx-pager{
 			&.bx-default-pager
 				a{
@@ -196,8 +197,8 @@ body{
 	overflow: hidden;
 	position: absolute;
 	top: 0;
-	width: 340px;
-	height: 330px;
+	width: 415px;
+	height: 320px;
 }
 .addthis_32x32_style{
 	display: inline;

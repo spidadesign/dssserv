@@ -124,14 +124,46 @@
 .submenu{
 	background-color: rgba(255, 255, 255, 0.9);
 	display:none;
+	min-height: 40px;
+	hr{
+		border-top: 1px solid rgba(138, 132, 134, 0.5);
+		margin: 0;
+	}
 	ul{
 		display:none;
-		border-top: 1px solid rgba(138, 132, 134, 0.5);
+		float:right;
+		list-style-type: none;
+		width: 100%;
+		>li{
+			padding-top: 5px;
+			padding-bottom: 2px;
+			display:inline;
+			float:left;
+			&:hover{
+				background-color: #ccd9e5;
+				padding-top: 5px;
+				padding-bottom: 2px;
+				border-radius: 3px;
+				a{
+					color: #fff;
+				}
+			}
+			>a{
+				font-size: 16px;
+				text-decoration: none;
+				text-transform: uppercase;
+				color: $dark-blue;
+				margin-right: 7px;
+				margin-left: 7px;
+			}
+		}
 	}
-	.list{
-			
+	#list, #services, #resources{
+		&:hover{
+			display: block !important;
+		}	
 	}
 	&:hover{
-		display: block;
+		display: block !important; 
 	}
 }

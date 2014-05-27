@@ -93,6 +93,9 @@
 					  theme: 'default',
 					  clickOverlayToClose: true,
 				 });
+				 if ($(this).hasClass('in')) {
+					 $(this).parent().addClass('active');
+					}
 			});
 		</script>
 		<script>
@@ -108,6 +111,7 @@
 				$( "#resources" ).toggle();
 				$(".submenu").toggle();
 			});
+			
 </script>
 	</body>
 </html>

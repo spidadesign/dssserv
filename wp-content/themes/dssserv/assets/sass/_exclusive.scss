@@ -1,10 +1,17 @@
 .exclusive-body{
+	background: url(../images/beige-bg.jpg);
+	padding-bottom: 90px;
+	.pref{
+		bottom:4px;
+		margin-bottom: 50px;
+	}
 	img{
 		&:hover{
 			background: url(../images/ex-hover.png) no-repeat center center;
 		}
 	}
 	.row{
+		margin:auto;
 		&.title{
 			color:#336699;
 			font-size: 18px;

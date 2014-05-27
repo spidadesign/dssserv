@@ -51,6 +51,7 @@
 	}
 
 }
+
 .home-contact, .interested{
 	color:#b5b1a9;
 	font-size: 14px;
@@ -157,6 +158,11 @@
 			}
 		}
 	}
+}
+.interested{
+	background-color: #8b8985;
+	background: none;
+	background-image: url('../images/pattern-trans.png');
 }
 .pref{
 	bottom: 49px ;

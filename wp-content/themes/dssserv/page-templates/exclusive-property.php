@@ -173,7 +173,7 @@ get_header();
 									addthis:title="Check out Apartment <?php the_title(); ?> at <?php echo $parentTitle; ?>"
 								></a>
 							</div>
-							<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+							<script type="text/javascript">var addthis_config = {};</script>
 							<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52b35f5a2a8b16b7"></script>
 							<!-- AddThis Button END -->
 						</div>

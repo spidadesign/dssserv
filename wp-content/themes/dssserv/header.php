@@ -60,6 +60,7 @@
 			<div class="submenu">
 							
 				<div class="container">
+				<hr>
 				<ul id="list">
 					<li><a href="<?php echo site_url();?>/rentals">Rentals</a></li>
 					<li><a href="<?php echo site_url();?>/sales">Sales</a></li>

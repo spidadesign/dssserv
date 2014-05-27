@@ -10,7 +10,9 @@ get_header();
 	</div>
 	<div class="breadcrumbs"></div>
 </div>
+
 <div class="exclusive-body">
+	<div class="pref beige"></div>
 	<div class="container">
 		<?php
 			$args = array(
