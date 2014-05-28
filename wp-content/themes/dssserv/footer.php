@@ -96,6 +96,10 @@
 				if ($(this).hasClass('in')) {
 					$(this).parent().addClass('active');
 				}
+				if(click%3 !== 0){
+					$(".bath-nav").addClass("sort");
+					$(".bath").addClass("sort");
+				}
 			});
 			$("#list-link").hover(function() {
 				$("#list").toggle();
@@ -127,17 +131,26 @@
 			$(".individual").hasClass("collapsed", function(){
 				$(this).find("button").removeClass("selected");
 			});
-
 			var click = 0;
-			$(".bath-nav").click(function(){
+			$(".price-nav").click(function(){
 				click = ++click;
+				window.location.href = "<?php echo strtok($_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"],'?'); ?>";
+				console.log(window.location.href);
 				if(click%3 === 0){
 					$(this).removeClass("sort");
-					$(".bath").removeClass("sort");
+					$(".price").removeClass("sort");
 				}
 				else{
+					if(click%3 === 1){
+						window.location.href = "<?php echo strtok($_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"],'?'); ?>?sort=price&order=DESC";
+						//console.log("<?php echo strtok($_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"],'?'); ?>");
+					}
+					if(click%3 === 2){
+						window.location.href = "<?php echo strtok($_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"],'?'); ?>?sort=price&order=DESC";
+						//window.location.href = window.location.href + "?sort=price&order=ASC";
+					}
 					$(this).addClass("sort");
-					$(".bath").addClass("sort");
+					$(".price").addClass("sort");
 				}
 
 			});

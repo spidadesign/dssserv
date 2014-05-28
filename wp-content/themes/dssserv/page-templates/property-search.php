@@ -3,6 +3,40 @@
 Template Name: Property
 */
 get_header();
+	/*$templateDir = get_bloginfo('template_directory');
+	$templateDir = $templateDir."/assets/includes/property-sort.php";
+	echo $templateDir;
+require_once "{$templateDir};*/
+if($_GET['borough'] === 'staten_island'):
+		$island = explode('_',$_GET['borough']);
+		$island = implode(' ', $island);
+		$borough = sanitize_text_field(ucwords(strtolower($island)));
+	else:
+		$borough = sanitize_text_field(ucwords(strtolower($_GET['borough'])));
+	endif;
+	if(isset($_GET['type'])):
+		$type = sanitize_text_field($_GET['type']);
+	endif;
+	$sort = sanitize_text_field($_GET['sort']);
+	$order = sanitize_text_field($_GET['order']);
+		$args = array(
+		'post_type' => 'property',
+		'posts_per_page' => 10,
+		'meta_key' => $sort,
+		'orderby' => 'meta_value_num',
+		'order' => $order,
+		'meta_query' => array(
+			array('key' => 'borough', 'value' => $borough, 'compare'   => 'LIKE'),
+			array('key' => 'random_219', 'value'=> $type, 'compare'    => 'LIKE'),
+			array('key' => 'random_8', 'value'=>'Exclusive', 'compare' => 'NOT LIKE'),
+			array('key' => 'bathrooms', 'value'=>'Exclusive', 'compare' => 'NOT LIKE')
+			)
+		);
+
+	$loop = new WP_Query( $args );
+	$listingCount = $loop->post_count;
+	$count = 1;
+	//print_r($loop);
 ?>
 <div class="container">
 	<div class="page-title">
@@ -33,35 +67,14 @@ get_header();
 			<div class="col-md-1 col-md-offset-4">Location</div>
 			<div class="col-md-1 col-md-offset-1">Bdrm</div>
 			<div class="col-md-1 bath-nav">Baths</div>
-			<div class="col-md-1 col-md-offset-1">Price</div>
+			<div class="col-md-1 col-md-offset-1 price-nav">Price</div>
 		</div>
-
+	<div class="list-reload">
 		<?php
-			if($_GET['borough'] === 'staten_island'):
-				$island = explode('_',$_GET['borough']);
-				$island = implode(' ', $island);
-				$borough = sanitize_text_field(ucwords(strtolower($island)));
-			else:
-				$borough = sanitize_text_field(ucwords(strtolower($_GET['borough'])));
-			endif;
-			if(isset($_GET['type'])):
-				$type = sanitize_text_field($_GET['type']);
-			endif;
-			$args = array(
-				'post_type' => 'property',
-				'posts_per_page' => 10,
-				'meta_query' => array(
-					array('key' => 'borough', 'value' => $borough, 'compare'   => 'LIKE'),
-					array('key' => 'random_219', 'value'=> $type, 'compare'    => 'LIKE'),
-					array('key' => 'random_8', 'value'=>'Exclusive', 'compare' => 'NOT LIKE')
-					)
-				);
-
-			$loop = new WP_Query( $args );
-			$listingCount = $loop->post_count;
-			$count = 1;
+			
 			while ( $loop->have_posts() ) : $loop->the_post();
 				$custom = get_post_custom(get_the_ID());
+				//echo "<pre>"; print_r($custom); echo "</pre>";
 				if($count === $listingCount):
 					echo '<div class="row individual last" data-toggle="collapse" data-target="#prop-'.$count.'">';
 				else:
@@ -116,7 +129,7 @@ get_header();
 				<div class="col-md-1 bath">
 					<?php echo $custom['bathrooms'][0]; ?>
 				</div>
-				<div class="col-md-1 col-md-offset-1">
+				<div class="col-md-1 col-md-offset-1 price">
 					$<?php echo $custom['price'][0]; ?>
 				</div>
 				<div class="col-md-1">
@@ -178,7 +191,7 @@ get_header();
 									<a class="addthis_button_preferred_1"></a>
 									<a class="addthis_button_preferred_2"></a>
 								</div>
-									<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+									<script type="text/javascript">var addthis_config = {};</script>
 									<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52b35f5a2a8b16b7"></script>
 									<!-- AddThis Button END -->
 							</div>
@@ -188,6 +201,7 @@ get_header();
 			</div>
 		</div>
 		<?php $count++; endwhile; ?>
+			</div>
 	</div>
 </div>
 
