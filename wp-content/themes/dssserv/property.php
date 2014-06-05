@@ -3,10 +3,11 @@
 Template Name: Property
 */
 get_header();
-?>
-<?php if (have_posts()) : while (have_posts()) : the_post();
+$count = 1;
+if (have_posts()) : while (have_posts()) : the_post();
 		$custom = get_post_custom(get_the_ID());
 ?>
+
 <div class="container">
 	<div class="page-title">
 		<h3><?php the_title(); ?></h3>
@@ -37,8 +38,9 @@ get_header();
 				?>
 					<div>
 
-						<a href="<?php echo $image[0];?>" class="lightbox-gallery" data-lightbox-gallery="gallery<?php echo $count; ?>" title="<?php the_title();?>">
+						<a href="<?php echo $image[0];?>" class="lightbox-gallery" data-lightbox-gallery="gallery<?php echo $count; ?>" title="<?php the_title();?>" id="test">
 							<?php echo wp_get_attachment_image( $attachment_id, 'large', '', $attr ); ?>
+							<div class="overlay"></div>
 							<div class="pan_frame">&nbsp;</div>
 						</a>
 					</div>
@@ -88,8 +90,8 @@ get_header();
 				Share this Listing on:
 				<!-- AddThis Button BEGIN -->
 				<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-					<a class="addthis_button_preferred_1"></a>
-					<a class="addthis_button_preferred_2"></a>
+					<a class="addthis_button_facebook"></a>
+					<a class="addthis_button_twitter"></a>
 				</div>
 				<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
 				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52b35f5a2a8b16b7"></script>
@@ -119,5 +121,9 @@ get_header();
 		</div>
 	</div>
 </div>
-<?php endwhile; endif; ?>
-<?php get_footer()?>
+<?php
+	$count++;
+	endwhile;
+	endif;
+	get_footer();
+?>

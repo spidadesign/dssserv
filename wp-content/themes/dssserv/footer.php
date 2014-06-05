@@ -73,6 +73,7 @@
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/bootstrap/collapse.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/bootstrap/transition.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/slick/slick.min.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/random.js"></script>
 		<script>
 			$(document).ready(function() {
 				$('.home-slider').slick({
@@ -108,36 +109,8 @@
 					$(".bath").addClass("sort");
 				}
 			});
-			$("#list-link").hover(function() {
-				$("#list").toggle();
-				$(".submenu").toggle();
-			});
-			$("#services-link").hover(function() {
-				$("#services").toggle();
-				$(".submenu").toggle();
-			});
-			$("#resources-link").hover(function() {
-				$("#resources").toggle();
-				$(".submenu").toggle();
-			});
 
-			$('.collapse.single-prop').on('show.bs.collapse', function() {
-				var $openTarget = "#" + $(this).attr('id');
-				$("button, .individual").removeClass("selected");
-				$('.collapse.single-prop.in').collapse('hide');
 
-				if($("[data-target='" + $openTarget + "']")){
-					$("button[data-target='" + $openTarget + "']").addClass("selected");
-				}
-				$(".selected").parent().parent().addClass("selected");
-			});
-			$("button").click(function() {
-				$(this).removeClass("selected");
-				$(".individual").removeClass("selected");
-			});
-			$(".individual").hasClass("collapsed", function(){
-				$(this).find("button").removeClass("selected");
-			});
 			var click = 0;
 			$(".price-nav").click(function(){
 				click = ++click;
@@ -161,6 +134,7 @@
 				}
 
 			});
+
 </script>
 		<?php
 			$curr_page = get_post();
