@@ -181,14 +181,10 @@ a{
 		color:#8f8d88;
 		font-size: 14px;
 	}
-	.bx-wrapper{
-		.bx-viewport{
-			height:240px !important;
-		}
-		.collapse-content{
-			li{
-				width:300px !important;
-			}
+	.slick-slider{
+		height:240px !important;
+		img{
+			max-width: 273px;
 		}
 	}
 }

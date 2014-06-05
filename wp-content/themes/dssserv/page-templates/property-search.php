@@ -71,7 +71,7 @@ if($_GET['borough'] === 'staten_island'):
 		</div>
 	<div class="list-reload">
 		<?php
-			
+
 			while ( $loop->have_posts() ) : $loop->the_post();
 				$custom = get_post_custom(get_the_ID());
 				//echo "<pre>"; print_r($custom); echo "</pre>";
@@ -152,19 +152,19 @@ if($_GET['borough'] === 'staten_island'):
 							 	if ( empty($images) ):
 								 	// no attachments here
 								else:?>
-									<ul class="collapse-content">
+									<li class="collapse-content">
 										<?php
 											foreach ( $images as $attachment_id => $attachment ):
 												$image = wp_get_attachment_image_src( $attachment_id, 'large' );
 											?>
 
-												<li style="width:100%">
+												<div>
 													<a href="<?php echo $image[0];?>" class="lightbox-gallery" data-lightbox-gallery="gallery<?php echo $count; ?>" title="<?php the_title();?>">
 														<?php echo wp_get_attachment_image( $attachment_id, 'medium' ); ?>
 													</a>
-												</li>
+												</div>
 										<?php endforeach;?>
-									</ul>
+									</div>
 								<?php endif; ?>
 					</div>
 					<div class="col-md-8">

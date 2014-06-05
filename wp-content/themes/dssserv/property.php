@@ -30,20 +30,20 @@ get_header();
 	 	if ( empty($images) ):
 		 	// no attachments here
 		else:?>
-			<ul class="single-listing">
+			<div class="single-listing">
 				<?php foreach ( $images as $attachment_id => $attachment ):
 					$attr = array('class'=> "attachment-$size img-responsive");
 					$image = wp_get_attachment_image_src( $attachment_id, 'large' );
 				?>
-					<li>
+					<div>
 
 						<a href="<?php echo $image[0];?>" class="lightbox-gallery" data-lightbox-gallery="gallery<?php echo $count; ?>" title="<?php the_title();?>">
 							<?php echo wp_get_attachment_image( $attachment_id, 'large', '', $attr ); ?>
 							<div class="pan_frame">&nbsp;</div>
 						</a>
-					</li>
+					</div>
 				<?php endforeach;?>
-			</ul>
+			</div>
 		<?php endif;?>
 		</div>
 		<div class="col-md-6">

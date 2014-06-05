@@ -67,26 +67,33 @@
 			  </div>
 			</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
-		<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/jquery.bxslider/jquery.bxslider.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/nivo-lightbox/nivo-lightbox.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/bootstrap/dropdown.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/bootstrap/modal.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/bootstrap/collapse.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/bootstrap/transition.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/slick/slick.min.js"></script>
 		<script>
 			$(document).ready(function() {
-				$('.top-slider').bxSlider({
-					controls: false,
-					captions: true,
+				$('.home-slider').slick({
+					dots: true,
+					draggable: false,
+					arrows: false,
 				});
-				$('.mid-page').bxSlider({
-					controls: false,
+				$('.mid-page').slick({
+					dots: true,
+					draggable: false,
+					arrows: false
 				});
-				$('.collapse-content').bxSlider({
-					controls: false,
+				$('.collapse-content').slick({
+					dots: true,
+					draggable: false,
+					arrows: false
 				});
-				$('.single-listing').bxSlider({
-					controls: false,
+				$('.single-listing').slick({
+					dots: true,
+					draggable: false,
+					arrows: false
 				});
 				$('.lightbox-gallery').nivoLightbox({
 					effect: 'fade',

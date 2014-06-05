@@ -7,7 +7,6 @@
 
 		<title><?php echo get_bloginfo('name');  wp_title(); ?></title>
 
-		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_directory'); ?>/assets/plugins/jquery.bxslider/jquery.bxslider.css">
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_directory'); ?>/assets/plugins/nivo-lightbox/nivo-lightbox.css">
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_directory'); ?>/assets/plugins/nivo-lightbox/themes/default/default.css">
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_directory'); ?>/assets/stylesheets/styles.css">

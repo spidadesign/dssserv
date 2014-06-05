@@ -5,19 +5,24 @@ Template Name: Home
 get_header();
 ?>
 <div class="top-home container">
-
-	<ul class="top-slider">
-		<li><img src="<?php bloginfo('template_directory'); ?>/assets/images/slider/harlem.jpg" title="
-			<div class='container caption'>
-				<span class='type'>Apartments</span>
-				<span class='place'>in
-					<span class='last'>Harlem</span>
-				</span>
+	<div class="home-slider">
+		<div>
+			<img src="<?php bloginfo('template_directory'); ?>/assets/images/slider/harlem.jpg">
+			<div class="top-overlay">
+				<div class='container caption'>
+					<img src="<?php bloginfo('template_directory'); ?>/assets/images/logo-white.png" class="logo">
+					<span class='type'>Apartments</span>
+					<span class='place'>in
+						<span class='last'>Harlem</span>
+					</span>
+					<a class="btn btn-default" href="<?php echo site_url(); ?>/property-search">Search For Apartments</a>
+				</div>
 			</div>
-			"></li>
-		<li><img src="<?php bloginfo('template_directory'); ?>/assets/images/slider/harlem.jpg" title="<span class='type'>Apartments</span>  <span class='place'>in <span class='last'>Harlem</span></span>"></li>
-	</ul>
-	<div class="top-overlay">&nbsp;</div>
+		</div>
+		<div>
+			<img src="<?php bloginfo('template_directory'); ?>/assets/images/slider/harlem.jpg">
+		</div>
+	</div>
 	<div class="pref beige"></div>
 </div>
 <div class="middle-home">
@@ -30,22 +35,20 @@ get_header();
 			<h3 class="title">
 				Check out our Exclusive Properties you won't find elsewhere!
 			</h3>
-
-
-			<ul class="mid-page">
-				<?php 
+			<div class="mid-page">
+				<?php
 					$args = array(
 					'post_type' => 'property',
 					'posts_per_page' => -1,
 					'post_parent' => 0,
 					'meta_query' => array(
 						array('key' => 'random_8', 'value'=>'Exclusive', 'compare'=>'LIKE')
-					
+
 					)
 				);
 					$loop = new WP_Query( $args );
 					while ( $loop->have_posts() ) : $loop->the_post(); ?>
-				<li>
+				<div>
 					<div class="exc-img">
 						<?php the_post_thumbnail('large'); ?>
 					<div class="pan_frame">&nbsp;</div>
@@ -53,8 +56,8 @@ get_header();
 							<?php the_title(); ?>
 						</div>
 					</div>
-				</li>
-				<?php 
+				</div>
+				<?php
 					endwhile;
 					wp_reset_postdata();
 					wp_reset_query();
