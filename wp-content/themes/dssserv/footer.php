@@ -111,7 +111,12 @@
 			});
 
 			$(".top-bar .col-md-1").click(function(){
-				console.log("<?php echo strtok($_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"],'?'); ?>");
+				if($(this).hasClass('price-nav')){
+					window.location.assign = "http://<?php echo strtok($_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"],'?'); ?>?sort=price&order=DESC";
+				}
+				else if($(this).hasClass('bath-nav')){
+					console.log('bath');
+				}
 			});
 			var click = 0;
 			$(".price-nav").click(function(){

@@ -51,7 +51,10 @@ get_header();
 				<div>
 					<div class="exc-img">
 						<?php the_post_thumbnail('large'); ?>
-					<div class="pan_frame">&nbsp;</div>
+					<div class="pan_frame">
+						<img src="<?php bloginfo('template_directory'); ?>/assets/images/img-overlay.png">
+						<a type="button" class="btn btn-default">Search Area</a>
+					</div>
 						<div class="exc-title">
 							<?php the_title(); ?>
 						</div>
@@ -63,6 +66,7 @@ get_header();
 					wp_reset_query();
 				?>
 			</ul>
+		</div>
 		</div>
 		<div class="col-md-6">
 			<div class="col-md-6 col-md-offset-3">

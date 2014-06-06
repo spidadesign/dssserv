@@ -9484,50 +9484,80 @@ body {
 }
 
 /* line 201, ../sass/styles.scss */
-.pan_frame {
-  background: url(../images/img-overlay.png) no-repeat;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 415px;
-  height: 320px;
-}
-
-/* line 209, ../sass/styles.scss */
 .addthis_32x32_style {
   display: inline;
   float: right;
   margin-top: -23px;
 }
-/* line 213, ../sass/styles.scss */
+/* line 205, ../sass/styles.scss */
 .addthis_32x32_style a {
   margin-left: 0;
 }
-/* line 216, ../sass/styles.scss */
+/* line 208, ../sass/styles.scss */
 .addthis_32x32_style .at15t_twitter {
   background: url(../images/social/tw.png) no-repeat center center !important;
   height: 30px;
   width: 30px;
   background-position: 0 0 !important;
 }
-/* line 221, ../sass/styles.scss */
+/* line 213, ../sass/styles.scss */
 .addthis_32x32_style .at15t_twitter:hover {
   background: url(../images/social/tw-hover.png) no-repeat center center !important;
 }
-/* line 225, ../sass/styles.scss */
+/* line 217, ../sass/styles.scss */
 .addthis_32x32_style .at15t_facebook {
   background: url(../images/social/fb.png) no-repeat center center !important;
   height: 30px;
   width: 30px;
   background-position: 0 0 !important;
 }
-/* line 230, ../sass/styles.scss */
+/* line 222, ../sass/styles.scss */
 .addthis_32x32_style .at15t_facebook:hover {
   background: url(../images/social/fb-hover.png) no-repeat center center !important;
 }
 
-/* line 236, ../sass/styles.scss */
+/* line 228, ../sass/styles.scss */
 .exc-img img {
   width: 415px;
-  height: 415px;
+  height: 330px;
+  border: 5px solid #fff;
+}
+
+/* line 234, ../sass/styles.scss */
+.pan_frame {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+/* line 238, ../sass/styles.scss */
+.pan_frame a {
+  top: 15px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+  position: absolute;
+  height: 44px;
+  width: 136px;
+  background-color: transparent;
+  border: none;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #fff;
+}
+/* line 255, ../sass/styles.scss */
+.pan_frame a:hover {
+  color: #fff;
+  background-color: transparent;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+/* line 262, ../sass/styles.scss */
+.pan_frame img {
+  width: 415px;
+  height: 330px;
+  border: none;
 }

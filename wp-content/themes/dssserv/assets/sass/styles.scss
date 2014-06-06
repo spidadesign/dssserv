@@ -198,14 +198,6 @@ body{
 	}
 }
 
-.pan_frame{
-	background: url(../images/img-overlay.png) no-repeat;
-	overflow: hidden;
-	position: absolute;
-	top: 0;
-	width: 415px;
-	height: 320px;
-}
 .addthis_32x32_style{
 	display: inline;
 	float: right;
@@ -235,6 +227,41 @@ body{
 .exc-img{
 	img{
 		width: 415px;
-		height: 415px;
+		height: 330px;
+		border: 5px solid #fff;
+	}
+}
+.pan_frame{
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	a{
+		top: 15px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		bottom: 0;
+		position: absolute;
+		height: 44px;
+		width: 136px;
+		background-color: transparent;
+		border: none;
+		border-top: 3px solid #fff;
+		border-bottom: 3px solid #fff;
+		border-radius: 0;
+		text-transform: uppercase;
+		font-size: 16px;
+		color:#fff;
+		&:hover{
+			color: #fff;
+			background-color: transparent;
+			border-top: 3px solid #fff;
+			border-bottom: 3px solid #fff;
+		}
+	}
+	img{
+		width: 415px;
+		height: 330px;
+		border: none;
 	}
 }
