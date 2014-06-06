@@ -161,6 +161,11 @@ if($_GET['borough'] === 'staten_island'):
 												<div>
 													<a href="<?php echo $image[0];?>" class="lightbox-gallery" data-lightbox-gallery="gallery<?php echo $count; ?>" title="<?php the_title();?>">
 														<?php echo wp_get_attachment_image( $attachment_id, 'medium' ); ?>
+														<div class="overlay"></div>
+														<div class="pan_frame">
+															<img src="<?php bloginfo('template_directory'); ?>/assets/images/corners.png">
+														</div>
+
 													</a>
 												</div>
 										<?php endforeach;?>

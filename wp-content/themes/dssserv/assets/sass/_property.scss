@@ -187,6 +187,27 @@ a{
 			max-width: 273px;
 		}
 	}
+	.pan_frame{
+		background:none;
+		position:static;
+		width:auto;
+		height:auto;
+		img{
+			position: absolute;
+			top: 0px;
+			height: 247px;
+			width: 274px;
+		}
+	}
+	.overlay{
+		height: 240px;
+		width: 255px;
+		left: 10px;
+	}
+	.slick-dots{
+		bottom: -48px;
+		right: 10px;
+	}
 }
 
 .single-property{

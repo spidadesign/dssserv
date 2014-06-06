@@ -28,8 +28,12 @@ $("button").click(function() {
 	$(this).removeClass("selected");
 	$(".individual").removeClass("selected");
 });
-$(".individual").hasClass("collapsed", function(){
-	$(this).find("button").removeClass("selected");
+
+//Removed close button when entire div i sslected
+$(".individual").click(function(){
+	$(this).removeClass("selected");
+	console.log($(this).children().last());
+	$(this).children().last().children().toggleClass("selected");
 });
 
 //Single Property hover
