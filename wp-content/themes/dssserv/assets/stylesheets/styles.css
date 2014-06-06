@@ -9522,14 +9522,38 @@ body {
   height: 330px;
   border: 5px solid #fff;
 }
-
 /* line 234, ../sass/styles.scss */
+.exc-img.map .background {
+  background-image: url("../images/map-frame.png");
+  background-repeat: no-repeat;
+  height: 344px;
+  width: 434px;
+  position: absolute;
+  bottom: -7px;
+  right: 16px;
+}
+/* line 244, ../sass/styles.scss */
+.exc-img.map img.map {
+  position: relative;
+  z-index: 5;
+}
+/* line 249, ../sass/styles.scss */
+.exc-img.map map {
+  position: relative;
+  z-index: 5;
+}
+/* line 253, ../sass/styles.scss */
+.exc-img.map map area:hover {
+  cursor: pointer;
+}
+
+/* line 260, ../sass/styles.scss */
 .pan_frame {
   overflow: hidden;
   position: absolute;
   top: 0;
 }
-/* line 238, ../sass/styles.scss */
+/* line 264, ../sass/styles.scss */
 .pan_frame a {
   top: 15px;
   left: 0;
@@ -9548,14 +9572,14 @@ body {
   font-size: 16px;
   color: #fff;
 }
-/* line 255, ../sass/styles.scss */
+/* line 281, ../sass/styles.scss */
 .pan_frame a:hover {
   color: #fff;
   background-color: transparent;
   border-top: 3px solid #fff;
   border-bottom: 3px solid #fff;
 }
-/* line 262, ../sass/styles.scss */
+/* line 288, ../sass/styles.scss */
 .pan_frame img {
   width: 415px;
   height: 330px;

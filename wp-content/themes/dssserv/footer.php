@@ -72,6 +72,7 @@
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/bootstrap/modal.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/bootstrap/collapse.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/bootstrap/transition.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/bootstrap/tooltip.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/slick/slick.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/random.js"></script>
 		<script>
@@ -108,8 +109,14 @@
 					$(".bath-nav").addClass("sort");
 					$(".bath").addClass("sort");
 				}
+				$('#example').tooltip();
 			});
-
+			if('<?php echo $_GET['type']; ?>' === 'sale'){
+				$("#sale").addClass("active");
+			}
+			else if('<?php echo $_GET['type']; ?>' === 'rental'){
+				$("#rental").addClass("active");
+			}
 			$(".top-bar .col-md-1").click(function(){
 				if($(this).hasClass('price-nav')){
 					window.location.assign = "http://<?php echo strtok($_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"],'?'); ?>?sort=price&order=DESC";

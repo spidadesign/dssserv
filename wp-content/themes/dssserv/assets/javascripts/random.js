@@ -40,3 +40,5 @@ $(".individual").click(function(){
 $(".lightbox-gallery").hover(function(){
 	$(this).toggleClass("hover");
 });
+
+//Set links to be active

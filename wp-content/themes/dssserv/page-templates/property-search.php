@@ -49,8 +49,8 @@ if($borough === 'staten_island'):
 <div class="ps-options">
 	<div class="container">
 		Select Type:
-			<a class="btn btn-default" href="?type=rental">Rental</a>
-			<a class="btn btn-default" href="?type=sale">Sale</a>
+			<a class="btn btn-default" href="?type=rental" id="rental">Rental</a>
+			<a class="btn btn-default" href="?type=sale" id="sale">Sale</a>
 		<div class="fr">
 			Select Area:
 			<a type="button" class="btn btn-default b-name" href="<?php echo site_url();?>/property-search/borough/manhattan">Manhattan</a>

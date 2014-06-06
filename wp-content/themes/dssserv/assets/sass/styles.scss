@@ -230,6 +230,32 @@ body{
 		height: 330px;
 		border: 5px solid #fff;
 	}
+	&.map{
+		.background{
+			background-image: url("../images/map-frame.png");
+			background-repeat: no-repeat;
+			height: 344px;
+			width: 434px;
+			position: absolute;
+			bottom: -7px;
+			right: 16px;
+		}
+		img{
+			&.map{
+				position:relative;
+				z-index: 5;
+			}
+		}
+		map{
+			position: relative;
+			z-index: 5;
+			area{
+				&:hover{
+					cursor: pointer;
+				}
+			}
+		}
+	}
 }
 .pan_frame{
 	overflow: hidden;

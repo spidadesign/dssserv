@@ -75,6 +75,17 @@ get_header();
 			<h3 class="title">
 				Check out our Available Apartments
 			</h3>
+			<div class="exc-img map">
+				<div class="background"></div>
+				<div class="tooltip"></div>
+					<img src="<?php bloginfo('template_directory'); ?>/assets/images/map.jpg" usemap="#image-maps-2014-06-06-150317" class="map"/>
+					<map name="image-maps-2014-06-06-150317" id="ImageMapsCom-image-maps-2014-06-06-150317">
+						<area data-toggle="tooltip" href="#" id="example" data-placement="left" title="Tooltip on left" title="Staten Island" shape="rect" coords="13,213,160,320" style="outline:none;" target="_self">
+						<area title="Manhattan" shape="rect" coords="177,40,233,174" style="outline:none;" target="_self">
+<area shape="rect" coords="408,318,410,320" alt="Image Map" style="outline:none;" title="Image Map" href="http://www.image-maps.com/index.php?aff=mapped_users_0" />
+</map>
+				<!--<img src="<?php bloginfo('template_directory'); ?>/assets/images/map.jpg">-->
+			</div>
 		</div>
 	</div>
 </div>
