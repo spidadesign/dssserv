@@ -397,7 +397,7 @@ a{
 		}
 	}
 	img{
-		background:("../image/property-hover.png") no-repeat center center;
+		background:url(../images/property-hover.png) no-repeat center center;
 		background-repeat: none;
 	}
 }
@@ -407,7 +407,7 @@ a{
   width: 250px;
   margin: auto;
   position: absolute;
-  background:("../image/property-hover.png") no-repeat center center;
+  background:url(../images/property-hover.png) no-repeat center center;
   opacity:0;
 }
 .nivo-lightbox-theme-default{
