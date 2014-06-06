@@ -41,7 +41,9 @@ if (have_posts()) : while (have_posts()) : the_post();
 						<a href="<?php echo $image[0];?>" class="lightbox-gallery" data-lightbox-gallery="gallery<?php echo $count; ?>" title="<?php the_title();?>" id="test">
 							<?php echo wp_get_attachment_image( $attachment_id, 'large', '', $attr ); ?>
 							<div class="overlay"></div>
-							<div class="pan_frame">&nbsp;</div>
+							<div class="pan_frame">
+								<img src="<?php bloginfo('template_directory'); ?>/assets/images/corners.png">
+							</div>
 						</a>
 					</div>
 				<?php endforeach;?>

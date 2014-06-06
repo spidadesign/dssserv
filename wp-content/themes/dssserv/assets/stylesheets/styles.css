@@ -8667,43 +8667,48 @@ a {
 }
 /* line 290, ../sass/_property.scss */
 .single-property .pan_frame {
-  background: url(../images/corners.png) no-repeat center center;
+  background: none;
+  position: static;
+  width: auto;
+  height: auto;
+}
+/* line 295, ../sass/_property.scss */
+.single-property .pan_frame img {
+  position: absolute;
+  top: 20px;
   height: 351px;
   width: 425px;
-  top: 20px;
-  position: absolute;
-  z-index: 9999999999;
 }
-/* line 300, ../sass/_property.scss */
+/* line 303, ../sass/_property.scss */
 .single-property .modal .pref {
   bottom: 4px;
 }
-/* line 303, ../sass/_property.scss */
+/* line 306, ../sass/_property.scss */
 .single-property .modal .modal-header {
   background: url(../images/modal-bg.jpg) no-repeat center center;
   height: 250px;
 }
-/* line 306, ../sass/_property.scss */
+/* line 309, ../sass/_property.scss */
 .single-property .modal .modal-header .modal-title {
   text-align: center;
   color: #fff;
   padding-top: 20px;
 }
-/* line 310, ../sass/_property.scss */
+/* line 313, ../sass/_property.scss */
 .single-property .modal .modal-header .modal-title img {
   margin-left: 60px;
 }
-/* line 313, ../sass/_property.scss */
+/* line 316, ../sass/_property.scss */
 .single-property .modal .modal-header .modal-title h4 {
   font-size: 30px;
   text-transform: uppercase;
 }
-/* line 317, ../sass/_property.scss */
+/* line 320, ../sass/_property.scss */
 .single-property .modal .modal-header .modal-title h3 {
   font-size: 58px;
   margin-top: 0;
 }
-/* line 320, ../sass/_property.scss */
+/* line 323, ../sass/_property.scss */
 .single-property .modal .modal-header .modal-title h3 span {
   font-family: Georgia, Times, "Times New Roman", serif !important;
   text-decoration: underline;
@@ -8712,17 +8717,17 @@ a {
   font-size: 30px;
   text-transform: none;
 }
-/* line 331, ../sass/_property.scss */
+/* line 334, ../sass/_property.scss */
 .single-property .modal .modal-header button.close {
   background: url(../images/modal-close.png) no-repeat center center;
   height: 60px;
   width: 60px;
 }
-/* line 335, ../sass/_property.scss */
+/* line 338, ../sass/_property.scss */
 .single-property .modal .modal-header button.close:hover {
   background: url(../images/modal-close-hover.png) no-repeat center center;
 }
-/* line 341, ../sass/_property.scss */
+/* line 344, ../sass/_property.scss */
 .single-property .modal .modal-body {
   background-image: url("../images/modal-form-bg.png");
   background-repeat: no-repeat;
@@ -8730,7 +8735,7 @@ a {
   padding-bottom: 0;
   height: 310px;
 }
-/* line 347, ../sass/_property.scss */
+/* line 350, ../sass/_property.scss */
 .single-property .modal .modal-body p {
   text-align: center;
   color: #336699;
@@ -8738,55 +8743,55 @@ a {
   font-weight: 16px;
   text-transform: none;
 }
-/* line 353, ../sass/_property.scss */
+/* line 356, ../sass/_property.scss */
 .single-property .modal .modal-body p span {
   font-size: 22px;
   font-family: 'Knockout50Welterweight';
 }
-/* line 358, ../sass/_property.scss */
+/* line 361, ../sass/_property.scss */
 .single-property .modal .modal-body hr {
   margin-top: 0px;
   border-top: 2px solid #dad5ca;
 }
-/* line 363, ../sass/_property.scss */
+/* line 366, ../sass/_property.scss */
 .single-property .modal .modal-dialog {
   width: 900px;
 }
-/* line 367, ../sass/_property.scss */
+/* line 370, ../sass/_property.scss */
 .single-property .modal-content {
   border-radius: 0;
   background: url(../images/beige-bg.jpg);
 }
-/* line 371, ../sass/_property.scss */
+/* line 374, ../sass/_property.scss */
 .single-property .bx-wrapper, .single-property .bx-viewport {
   width: 424px !important;
   height: 425px !important;
 }
-/* line 375, ../sass/_property.scss */
+/* line 378, ../sass/_property.scss */
 .single-property .bx-wrapper img, .single-property .bx-viewport img {
   width: 424px !important;
   height: 425px !important;
 }
-/* line 383, ../sass/_property.scss */
+/* line 386, ../sass/_property.scss */
 .single-property ul.single-listing li:hover {
   background: url(../images/prop-hover.png) center center no-repeat;
 }
 
-/* line 392, ../sass/_property.scss */
+/* line 394, ../sass/_property.scss */
+.lightbox-gallery .img-responsive {
+  border: 7px solid #fff;
+  background: url(../images/property-hover.png) no-repeat center center;
+}
+/* line 399, ../sass/_property.scss */
 .lightbox-gallery:hover .overlay {
   opacity: 1;
 }
-/* line 395, ../sass/_property.scss */
+/* line 402, ../sass/_property.scss */
 .lightbox-gallery:hover .img-responsive {
-  opacity: 0.7;
-}
-/* line 399, ../sass/_property.scss */
-.lightbox-gallery img {
-  background: url(../images/property-hover.png) no-repeat center center;
-  background-repeat: none;
+  opacity: 1;
 }
 
-/* line 404, ../sass/_property.scss */
+/* line 410, ../sass/_property.scss */
 .overlay {
   bottom: 0;
   left: 0;
@@ -8800,7 +8805,7 @@ a {
   opacity: 0;
 }
 
-/* line 414, ../sass/_property.scss */
+/* line 420, ../sass/_property.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-wrap {
   top: auto;
   left: auto;
@@ -8809,57 +8814,76 @@ a {
   position: static;
   margin-top: 50px;
 }
-/* line 422, ../sass/_property.scss */
+/* line 428, ../sass/_property.scss */
 .nivo-lightbox-theme-default.nivo-lightbox-overlay {
   background: none;
   background-color: rgba(148, 146, 141, 0.9);
   background-image: url("../images/pattern-trans.png");
 }
-/* line 428, ../sass/_property.scss */
+/* line 434, ../sass/_property.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-image img {
   border: 6px solid white;
 }
-/* line 433, ../sass/_property.scss */
+/* line 439, ../sass/_property.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-nav:hover {
   background-color: transparent;
 }
-/* line 437, ../sass/_property.scss */
+/* line 443, ../sass/_property.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-next {
   background: url(../images/next.png) no-repeat center center;
 }
-/* line 439, ../sass/_property.scss */
+/* line 445, ../sass/_property.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-next:hover {
   background: url(../images/next-hover.png) no-repeat center center;
 }
-/* line 444, ../sass/_property.scss */
+/* line 450, ../sass/_property.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-prev {
   background: url(../images/prev.png) no-repeat center center;
 }
-/* line 446, ../sass/_property.scss */
+/* line 452, ../sass/_property.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-prev:hover {
   background: url(../images/prev-hover.png) no-repeat center center;
 }
-/* line 451, ../sass/_property.scss */
+/* line 457, ../sass/_property.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-close {
   background: url(../images/close.png) no-repeat center center;
   height: 60px;
   width: 60px;
 }
-/* line 455, ../sass/_property.scss */
+/* line 461, ../sass/_property.scss */
 .nivo-lightbox-theme-default .nivo-lightbox-close:hover {
   background: url(../images/close-hover.png) no-repeat center center;
 }
 
-/* line 460, ../sass/_property.scss */
+/* line 466, ../sass/_property.scss */
 .share {
   color: #b5b1a9;
   font-size: 12px;
   font-family: Georgia, Times, "Times New Roman", serif !important;
 }
 
-/* line 465, ../sass/_property.scss */
+/* line 471, ../sass/_property.scss */
 .sort {
   background-color: #ccd9e5;
+}
+
+/* line 474, ../sass/_property.scss */
+.slick-dots {
+  bottom: -10px;
+}
+/* line 476, ../sass/_property.scss */
+.slick-dots li {
+  position: static;
+}
+/* line 478, ../sass/_property.scss */
+.slick-dots li button {
+  width: 42px;
+  height: 15px;
+  background: url(../images/property-pager.png) no-repeat center center;
+}
+/* line 484, ../sass/_property.scss */
+.slick-dots li.slick-active button {
+  background: url(../images/property-active.png) no-repeat center center;
 }
 
 /* line 1, ../sass/_exclusive.scss */
