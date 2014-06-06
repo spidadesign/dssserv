@@ -110,34 +110,10 @@
 					$(".bath").addClass("sort");
 				}
 				$('#example').tooltip();
+				setNavigation('<?php echo $_GET['type']; ?>', '<?php echo $wp_query->query_vars['borough'] ?>')
 			});
 			
-			//Setting Active Links
-			if('<?php echo $_GET['type']; ?>' === 'sale'){
-				$("#sale").addClass("active");
-			}
-			else if('<?php echo $_GET['type']; ?>' === 'rental'){
-				$("#rental").addClass("active");
-			}
-			
-			
-			//Setting active links for boroughs
-			if('<?php echo $wp_query->query_vars['borough'] ?>' === 'manhattan'){
-				$("#manhattan").addClass("active");
-			}
-			else if('<?php echo $wp_query->query_vars['borough'] ?>' === 'bronx'){
-				$("#bronx").addClass("active");
-			}
-			else if('<?php echo $wp_query->query_vars['borough'] ?>' === 'queens'){
-				$("#queens").addClass("active");
-			}
-			else if('<?php echo $wp_query->query_vars['borough'] ?>' === 'brooklyn'){
-				$("#brooklyn").addClass("active");
-			}
-			else if('<?php echo $wp_query->query_vars['borough'] ?>' === 'staten_island'){
-				$("#staten_island").addClass("active");
-			}
-			
+						
 			$(".top-bar .col-md-1").click(function(){
 				if($(this).hasClass('price-nav')){
 					window.location.assign = "http://<?php echo strtok($_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"],'?'); ?>?sort=price&order=DESC";

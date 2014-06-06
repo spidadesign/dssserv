@@ -42,3 +42,10 @@ $(".lightbox-gallery").hover(function(){
 });
 
 //Set links to be active
+function setNavigation(type, borough){
+	//Setting Active Links
+	type = "#"+type;
+	borough = "#"+borough
+	$(type).addClass("active");
+	$(borough).addClass("active");
+}
