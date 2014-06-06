@@ -40,3 +40,7 @@ function the_breadcrumb() {
     elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
     echo '</ul>';
 }
+
+
+add_rewrite_tag('%borough%','([^&]+)');
+add_rewrite_rule('^borough/([^/]+)','index.php?page_id=18&borough=$matches[1]','top');

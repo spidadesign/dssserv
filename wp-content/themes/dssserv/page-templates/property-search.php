@@ -6,13 +6,15 @@ get_header();
 	/*$templateDir = get_bloginfo('template_directory');
 	$templateDir = $templateDir."/assets/includes/property-sort.php";
 	echo $templateDir;
-require_once "{$templateDir};*/
-if($_GET['borough'] === 'staten_island'):
-		$island = explode('_',$_GET['borough']);
+require_once "{$templateDir};0*/
+//echo "<pre>"; print_r($wp_query->query_vars); echo "</pre>";
+$borough = $wp_query->query_vars['borough'];
+if($borough === 'staten_island'):
+		$island = explode('_',$borough);
 		$island = implode(' ', $island);
 		$borough = sanitize_text_field(ucwords(strtolower($island)));
 	else:
-		$borough = sanitize_text_field(ucwords(strtolower($_GET['borough'])));
+		$borough = sanitize_text_field(ucwords(strtolower($borough)));
 	endif;
 	if(isset($_GET['type'])):
 		$type = sanitize_text_field($_GET['type']);
@@ -28,6 +30,7 @@ if($_GET['borough'] === 'staten_island'):
 		'meta_query' => array(
 			array('key' => 'borough', 'value' => $borough, 'compare'   => 'LIKE'),
 			array('key' => 'random_219', 'value'=> $type, 'compare'    => 'LIKE'),
+			//array('key' => 'price', 'value' => order, 'compare'   => 'LIKE'),
 			array('key' => 'random_8', 'value'=>'Exclusive', 'compare' => 'NOT LIKE'),
 			array('key' => 'bathrooms', 'value'=>'Exclusive', 'compare' => 'NOT LIKE')
 			)
@@ -36,7 +39,6 @@ if($_GET['borough'] === 'staten_island'):
 	$loop = new WP_Query( $args );
 	$listingCount = $loop->post_count;
 	$count = 1;
-	//print_r($loop);
 ?>
 <div class="container">
 	<div class="page-title">
@@ -51,11 +53,11 @@ if($_GET['borough'] === 'staten_island'):
 			<a class="btn btn-default" href="?type=sale">Sale</a>
 		<div class="fr">
 			Select Area:
-			<a type="button" class="btn btn-default b-name" href="?borough=manhattan">Manhattan</a>
-			<a type="button" class="btn btn-default b-name" href="?borough=bronx">Bronx</a>
-			<a type="button" class="btn btn-default b-name" href="?borough=brooklyn">Brooklyn</a>
-			<a type="button" class="btn btn-default b-name" href="?borough=queens">Queens</a>
-			<a type="button" class="btn btn-default b-name" href="?borough=staten_island">Staten Island</a>
+			<a type="button" class="btn btn-default b-name" href="<?php echo site_url();?>/property-search/borough/manhattan">Manhattan</a>
+			<a type="button" class="btn btn-default b-name" href="<?php echo site_url();?>/property-search/borough/bronx">Bronx</a>
+			<a type="button" class="btn btn-default b-name" href="<?php echo site_url();?>/property-search/borough/brooklyn">Brooklyn</a>
+			<a type="button" class="btn btn-default b-name" href="<?php echo site_url();?>/property-search/borough/queens">Queens</a>
+			<a type="button" class="btn btn-default b-name" href="<?php echo site_url();?>/property-search/borough/staten_island">Staten Island</a>
 		</div>
 	</div>
 </div>

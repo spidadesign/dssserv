@@ -110,15 +110,17 @@
 				}
 			});
 
-
+			$(".top-bar .col-md-1").click(function(){
+				console.log("<?php echo strtok($_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"],'?'); ?>");
+			});
 			var click = 0;
 			$(".price-nav").click(function(){
 				click = ++click;
 				window.location.href = "<?php echo strtok($_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"],'?'); ?>";
-				console.log(window.location.href);
+				//console.log(window.location.href);
 				if(click%3 === 0){
-					$(this).removeClass("sort");
-					$(".price").removeClass("sort");
+					//$(this).removeClass("sort");
+					//$(".price").removeClass("sort");
 				}
 				else{
 					if(click%3 === 1){
