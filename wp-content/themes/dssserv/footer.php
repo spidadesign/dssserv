@@ -77,26 +77,11 @@
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/random.js"></script>
 		<script>
 			$(document).ready(function() {
-				$('.home-slider').slick({
-					dots: true,
-					draggable: false,
-					arrows: false,
-				});
-				$('.mid-page').slick({
-					dots: true,
-					draggable: false,
-					arrows: false
-				});
-				$('.collapse-content').slick({
-					dots: true,
-					draggable: false,
-					arrows: false
-				});
-				$('.single-listing').slick({
-					dots: true,
-					draggable: false,
-					arrows: false
-				});
+				setNavigation('<?php echo $_GET['type']; ?>', '<?php echo $wp_query->query_vars['borough'] ?>');
+				slider('.home-slider');
+				slider('.mid-page');
+				slider('.collapse-content');
+				slider('.single-listing');
 				$('.lightbox-gallery').nivoLightbox({
 					effect: 'fade',
 					theme: 'default',
@@ -110,7 +95,7 @@
 					$(".bath").addClass("sort");
 				}
 				$('#example').tooltip();
-				setNavigation('<?php echo $_GET['type']; ?>', '<?php echo $wp_query->query_vars['borough'] ?>')
+				
 			});
 			
 						
@@ -147,16 +132,6 @@
 			});
 
 </script>
-		<?php
-			$curr_page = get_post();
-			if($curr_page->ID == 18):
-		?>
-			<script>
-				var borough = $(".b-name").html().toLowerCase();
-				$('.b-name').filter(function () {
-					return $(this).text().toLowerCase() === "<?php echo $_GET['borough']; ?>";
-				}).addClass('active');
-			</script>
-		<?php endif; ?>
+
 	</body>
 </html>

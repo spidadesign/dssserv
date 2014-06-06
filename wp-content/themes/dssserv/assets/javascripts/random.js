@@ -32,7 +32,6 @@ $("button").click(function() {
 //Removed close button when entire div i sslected
 $(".individual").click(function(){
 	$(this).removeClass("selected");
-	console.log($(this).children().last());
 	$(this).children().last().children().toggleClass("selected");
 });
 
@@ -48,4 +47,11 @@ function setNavigation(type, borough){
 	borough = "#"+borough
 	$(type).addClass("active");
 	$(borough).addClass("active");
+}
+function slider(className){
+	$(className).slick({
+		dots: true,
+		draggable: false,
+		arrows: false,
+	});
 }
