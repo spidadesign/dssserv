@@ -53,11 +53,11 @@ if($borough === 'staten_island'):
 			<a class="btn btn-default" href="?type=sale" id="sale">Sale</a>
 		<div class="fr">
 			Select Area:
-			<a type="button" class="btn btn-default b-name" href="<?php echo site_url();?>/property-search/borough/manhattan">Manhattan</a>
-			<a type="button" class="btn btn-default b-name" href="<?php echo site_url();?>/property-search/borough/bronx">Bronx</a>
-			<a type="button" class="btn btn-default b-name" href="<?php echo site_url();?>/property-search/borough/brooklyn">Brooklyn</a>
-			<a type="button" class="btn btn-default b-name" href="<?php echo site_url();?>/property-search/borough/queens">Queens</a>
-			<a type="button" class="btn btn-default b-name" href="<?php echo site_url();?>/property-search/borough/staten_island">Staten Island</a>
+			<a type="button" class="btn btn-default b-name" id="manhattan" href="<?php echo site_url();?>/property-search/borough/manhattan">Manhattan</a>
+			<a type="button" class="btn btn-default b-name" id="bronx" href="<?php echo site_url();?>/property-search/borough/bronx">Bronx</a>
+			<a type="button" class="btn btn-default b-name" id="brooklyn" href="<?php echo site_url();?>/property-search/borough/brooklyn">Brooklyn</a>
+			<a type="button" class="btn btn-default b-name" id="queens" href="<?php echo site_url();?>/property-search/borough/queens">Queens</a>
+			<a type="button" class="btn btn-default b-name" id="staten_island" href="<?php echo site_url();?>/property-search/borough/staten_island">Staten Island</a>
 		</div>
 	</div>
 </div>
