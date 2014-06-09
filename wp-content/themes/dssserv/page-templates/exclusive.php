@@ -21,14 +21,14 @@ get_header();
 				'post_parent' => 0,
 				'meta_query' => array(
 					array('key' => 'random_8', 'value'=>'Exclusive', 'compare'=>'LIKE')
-					
+
 					)
 				);
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post();
 		?>
 		<div class="col-md-4">
-		<?php 
+		<?php
 			$title = strtolower(get_the_title());
 			$title = explode(' ', $title);
 			$link = implode('-', $title);
@@ -36,13 +36,17 @@ get_header();
 		<a href="<?php echo site_url().'/exclusive-property/'.'?location='.$link;?>">
 			<div class="row">
 				<?php the_post_thumbnail('large'); ?>
+				<div class="overlay"></div>
+				<div class="pan_frame">
+					<img src="<?php bloginfo('template_directory'); ?>/assets/images/corners.png">
+				</div>
 			</div>
 			 <div class="row title">
 			 	<?php the_title(); ?>
 			 </div>
 		</div>
 		</a>
-		
+
 			<?php endwhile; ?>
 	</div>
 </div>

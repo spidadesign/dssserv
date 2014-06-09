@@ -95,7 +95,7 @@ if (have_posts()) : while (have_posts()) : the_post();
 					<a class="addthis_button_facebook"></a>
 					<a class="addthis_button_twitter"></a>
 				</div>
-				<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+				<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
 				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52b35f5a2a8b16b7"></script>
 				<!-- AddThis Button END -->
 			</div>

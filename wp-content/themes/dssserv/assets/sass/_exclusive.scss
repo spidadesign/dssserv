@@ -18,6 +18,21 @@
 			font-family: Georgia, Times, "Times New Roman", serif !important;
 			text-align: center;
 		}
+
+	}
+	.pan_frame{
+		img{
+			width:260px;
+			height:260px;
+			border:none;
+		}
+	}
+	.row{
+		&.image{
+			img{
+				border: 4px solid #fff;
+			}
+		}
 	}
 }
 .exclusive{

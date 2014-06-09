@@ -22,9 +22,7 @@ get_header();
 						'post_parent' => 0,
 						'name' => $currProp,
 						'meta_query' => array(
-							//array('key' => 'random_219', 'value'=> $type, 'compare' => 'LIKE'),
 							array('key' => 'random_8', 'value'=>'Exclusive', 'compare'=>'LIKE')
-
 							)
 						);
 					$loop = new WP_Query( $args );
@@ -136,15 +134,14 @@ get_header();
 											foreach ( $images as $attachment_id => $attachment ):
 												$image = wp_get_attachment_image_src( $attachment_id, 'large' );
 											?>
-
-												<li style="width:100%">
-													<a href="<?php echo $image[0];?>"
-														class="lightbox-gallery"
-														data-lightbox-gallery="gallery<?php echo $count; ?>"
-														title="Apartment <?php the_title();?>">
-															<?php echo wp_get_attachment_image( $attachment_id, 'medium' ); ?>
-													</a>
-												</li>
+											<div>
+												<a href="<?php echo $image[0];?>"
+													class="lightbox-gallery"
+													data-lightbox-gallery="gallery<?php echo $count; ?>"
+													title="Apartment <?php the_title();?>">
+													<?php echo wp_get_attachment_image( $attachment_id, 'medium' ); ?>
+												</a>
+											</div>
 										<?php endforeach;?>
 									</ul>
 								<?php endif; ?>
@@ -173,19 +170,10 @@ get_header();
 								Share this Listing on:
 								<!-- AddThis Button BEGIN -->
 								<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-									<a
-										class="addthis_button_preferred_2"
-										addthis:url="<?php echo the_permalink();?>"
-										addthis:title="Check out Apartment <?php the_title(); ?> at <?php echo $parentTitle; ?>"
-									></a>
-									<a
-										class="addthis_button_preferred_1"
-										addthis:url="<?php echo the_permalink();?>"
-										addthis:title="Check out Apartment <?php the_title(); ?> at <?php echo $parentTitle; ?>"
-										></a>
-
+									<a class="addthis_button_facebook"></a>
+									<a class="addthis_button_twitter"></a>
 								</div>
-								<script type="text/javascript">var addthis_config = {};</script>
+								<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
 								<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52b35f5a2a8b16b7"></script>
 								<!-- AddThis Button END -->
 								</div>

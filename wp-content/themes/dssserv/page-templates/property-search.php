@@ -3,11 +3,8 @@
 Template Name: Property
 */
 get_header();
-	/*$templateDir = get_bloginfo('template_directory');
-	$templateDir = $templateDir."/assets/includes/property-sort.php";
-	echo $templateDir;
-require_once "{$templateDir};0*/
-//echo "<pre>"; print_r($wp_query->query_vars); echo "</pre>";
+	//global $wp_rewrite;
+	//echo "<pre>"; print_r($wp_rewrite->rules); echo "</pre>";
 $borough = $wp_query->query_vars['borough'];
 if($borough === 'staten_island'):
 		$island = explode('_',$borough);

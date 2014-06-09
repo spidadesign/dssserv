@@ -82,6 +82,12 @@
 				slider('.mid-page');
 				slider('.collapse-content');
 				slider('.single-listing');
+				//slider('.guide-img');
+				$('.guide-img').slick({
+					dots: true,
+					draggable: false,
+					arrows: true,
+				});
 				$('.lightbox-gallery').nivoLightbox({
 					effect: 'fade',
 					theme: 'default',
@@ -95,10 +101,10 @@
 					$(".bath").addClass("sort");
 				}
 				$('#example').tooltip();
-				
+
 			});
-			
-						
+
+
 			$(".top-bar .col-md-1").click(function(){
 				if($(this).hasClass('price-nav')){
 					window.location.assign = "http://<?php echo strtok($_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"],'?'); ?>?sort=price&order=DESC";
