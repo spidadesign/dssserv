@@ -41,10 +41,36 @@
 				<div class="container">
 					<div class="row">
 						<a class="navbar-brand" href="<?php echo site_url(); ?>">
-							<img src="<?php bloginfo('template_directory'); ?>/assets/images/main-logo.png" alt="DSS Services">
+							<img src="<?php bloginfo('template_directory'); ?>/assets/images/main-logo.png" alt="DSS Services" class="img-responsive">
 						</a>
 						<div class="navbar-collapse collapse">
-							<ul class="nav navbar-nav navbar-right">
+							<ul class="nav navbar-nav visible-sm visible-xs">
+								<li><a href="<?php echo site_url(); ?>/property-search">Property Search</a></li>
+								<li class="inline-accordion">
+									<div class="panel-group" id="accordion">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a href="#list" data-toggle="collapse" data-parent="#accordion">
+														List With Us <b class="caret"></b>
+													</a>
+												</h4>
+											</div>
+											<div id="list" class="panel-collapse collapse">
+												<ul class="panel-body">
+													<li><a href="<?php echo site_url(); ?>/rentals">Rentals</a></li>
+													<li><a href="<?php echo site_url(); ?>/sales">Sales</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li><a> Services</a></li>
+								<li><a>Resources</a></li>
+								<li><a href="<?php echo site_url();?>/about-us">About</a></li>
+								<li><a href="#" data-toggle="modal" data-target="#contact">Contact</a></li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
 								<li><a href="<?php echo site_url(); ?>/property-search">Property Search</a></li>
 								<li id="list-link"><a>List With Us</a></li>
 								<li><a id="services-link">Services</a></li>

@@ -56,21 +56,21 @@ if (have_posts()) : while (have_posts()) : the_post();
 			</div>
 			<div class="row info">
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-md-3 col-sm-3 col-xs-3">
 						<div class="col-md-8">Bedrooms:</div>
 						<div class="col-md-4 number"><?php echo $custom['bedrooms'][0]; ?></div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-3 col-sm-3 col-xs-3">
 						<div class="col-md-8">Price:</div>
 						<div class="col-md-4 number"><?php echo $custom['price'][0]; ?></div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-3">
+					<div class="col-md-3 col-sm-3 col-xs-3">
 						<div class="col-md-8">Bathrooms:</div>
 						<div class="col-md-4 number"><?php echo $custom['bathrooms'][0]; ?></div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-3 col-sm-3 col-xs-3">
 						<div class="col-md-8">Price:</div>
 						<div class="col-md-4 number"><?php echo $custom['price'][0]; ?></div>
 					</div>

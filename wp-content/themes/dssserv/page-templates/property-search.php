@@ -45,11 +45,11 @@ if($borough === 'staten_island'):
 </div>
 <div class="ps-options">
 	<div class="container">
-		Select Type:
+		<span>Select Type:</span>
 			<a class="btn btn-default" href="?type=rental" id="rental">Rental</a>
 			<a class="btn btn-default" href="?type=sale" id="sale">Sale</a>
 		<div class="fr">
-			Select Area:
+			<span>Select Area:</span>
 			<a type="button" class="btn btn-default b-name" id="manhattan" href="<?php echo site_url();?>/property-search/borough/manhattan">Manhattan</a>
 			<a type="button" class="btn btn-default b-name" id="bronx" href="<?php echo site_url();?>/property-search/borough/bronx">Bronx</a>
 			<a type="button" class="btn btn-default b-name" id="brooklyn" href="<?php echo site_url();?>/property-search/borough/brooklyn">Brooklyn</a>
@@ -62,11 +62,11 @@ if($borough === 'staten_island'):
 	<div class="pref beige"></div>
 	<div class="container">
 		<div class="row top-bar">
-			<div class="col-md-1 number">#</div>
-			<div class="col-md-1 col-md-offset-4">Location</div>
-			<div class="col-md-1 col-md-offset-1">Bdrm</div>
-			<div class="col-md-1 bath-nav">Baths</div>
-			<div class="col-md-1 col-md-offset-1 price-nav">Price</div>
+			<div class="col-md-1 col-sm-1 col-xs-1 number">#</div>
+			<div class="col-md-1 col-sm-1 col-xs-3 col-xs-offset-0 col-md-offset-4">Location</div>
+			<div class="col-md-1 col-sm-1 col-xs-2 col-xs-offset-0 col-md-offset-1">Bdrm</div>
+			<div class="col-md-1 col-sm-1 col-xs-2 col-xs-offset-0 bath-nav">Baths</div>
+			<div class="col-md-1 col-sm-1 col-xs-2 col-xs-offset-0 col-md-offset-1 price-nav">Price</div>
 		</div>
 	<div class="list-reload">
 		<?php
@@ -80,7 +80,7 @@ if($borough === 'staten_island'):
 					echo '<div class="row individual" data-toggle="collapse" data-target="#prop-'.$count.'">';
 				endif;
 				?>
-				<div class="col-md-1 number">
+				<div class="col-md-1 col-sm-1 col-xs-1 col-xs-offset-0 number">
 					<div class="count">
 						<?php
 							if($count < 10):
@@ -91,7 +91,7 @@ if($borough === 'staten_island'):
 						?>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 hidden-xs">
 					 <?php
 					 	$images =& get_children( array (
 					 		'post_parent'    => $post->ID,
@@ -119,16 +119,16 @@ if($borough === 'staten_island'):
 						?>
 
 				</div>
-				<div class="col-md-1">
+				<div class="col-md-1 col-sm-1 col-xs-3">
 					<?php echo $custom['area'][0]; ?>
 				</div>
-				<div class="col-md-1 col-md-offset-1">
+				<div class="col-md-1 col-sm-1 col-xs-2 col-xs-offset-0 col-md-offset-1">
 					<?php echo $custom['bedrooms'][0]; ?>
 				</div>
-				<div class="col-md-1 bath">
+				<div class="col-md-1 col-sm-1 col-xs-2 col-xs-offset-0 bath">
 					<?php echo $custom['bathrooms'][0]; ?>
 				</div>
-				<div class="col-md-1 col-md-offset-1 price">
+				<div class="col-md-1 col-md-offset-1 col-sm-1 col-xs-2 col-xs-offset-0 price">
 					$<?php echo $custom['price'][0]; ?>
 				</div>
 				<div class="col-md-1">

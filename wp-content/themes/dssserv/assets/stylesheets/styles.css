@@ -9698,3 +9698,160 @@ body {
   height: 330px;
   border: none;
 }
+
+@media (min-device-width: 320px) and (max-device-width: 568px) {
+  /* line 5, ../sass/_responsive.scss */
+  .listings .col-xs-1, .listings .col-xs-2, .listings .col-xs-3 {
+    padding-left: 1px;
+  }
+  /* line 8, ../sass/_responsive.scss */
+  .listings .number {
+    padding-left: 0;
+  }
+  /* line 14, ../sass/_responsive.scss */
+  .listings button.btn.btn-default.selected {
+    background: url(../images/prop-close-small.png) no-repeat center center;
+    height: 30px;
+    width: 30px;
+  }
+
+  /* line 24, ../sass/_responsive.scss */
+  .ps-options span {
+    display: block;
+  }
+
+  /* line 29, ../sass/_responsive.scss */
+  .navbar-brand img {
+    position: absolute;
+    left: 10px;
+    top: 55px;
+  }
+
+  /* line 35, ../sass/_responsive.scss */
+  .big-space {
+    display: none;
+  }
+
+  /* line 38, ../sass/_responsive.scss */
+  .footer {
+    height: auto;
+    padding-top: 0;
+  }
+  /* line 41, ../sass/_responsive.scss */
+  .footer .top {
+    margin-bottom: 15px;
+  }
+
+  /* line 45, ../sass/_responsive.scss */
+  .exc-img {
+    width: auto !important;
+    height: auto !important;
+  }
+  /* line 49, ../sass/_responsive.scss */
+  .exc-img.map .background {
+    display: none;
+  }
+
+  /* line 56, ../sass/_responsive.scss */
+  .bottom-home .content hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* line 62, ../sass/_responsive.scss */
+  .city {
+    display: none;
+  }
+
+  /* line 65, ../sass/_responsive.scss */
+  .header {
+    max-height: 160px;
+    height: auto;
+  }
+
+  /* line 70, ../sass/_responsive.scss */
+  .wpcf7 .text {
+    text-align: center;
+  }
+
+  /* line 75, ../sass/_responsive.scss */
+  .wpcf7-form-control.wpcf7-submit {
+    margin-left: 25px;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+  /* line 83, ../sass/_responsive.scss */
+  .top-home {
+    margin-top: 170px;
+  }
+  /* line 86, ../sass/_responsive.scss */
+  .top-home .home-slider img {
+    height: auto;
+  }
+
+  /* line 91, ../sass/_responsive.scss */
+  .navbar {
+    height: 115px;
+  }
+
+  /* line 94, ../sass/_responsive.scss */
+  .navbar-collapse {
+    min-width: 320px;
+    position: relative;
+    left: -30px;
+    top: -55px;
+    height: auto;
+    background-color: white !important;
+  }
+
+  /* line 104, ../sass/_responsive.scss */
+  .navbar.navbar-default .collapse {
+    background-color: white !important;
+  }
+
+  /* line 110, ../sass/_responsive.scss */
+  .exc-img img {
+    width: 260px;
+    height: 270px;
+  }
+
+  /* line 117, ../sass/_responsive.scss */
+  .pan_frame img {
+    width: 260px;
+    height: 270px;
+  }
+
+  /* line 123, ../sass/_responsive.scss */
+  .middle-home .slick-slider {
+    height: 320px;
+  }
+
+  /* line 129, ../sass/_responsive.scss */
+  .prop-content .pan_frame img {
+    width: 260px;
+  }
+  /* line 133, ../sass/_responsive.scss */
+  .prop-content hr {
+    margin-top: 15px;
+  }
+  /* line 135, ../sass/_responsive.scss */
+  .prop-content hr.share {
+    margin-top: 15px;
+  }
+  /* line 139, ../sass/_responsive.scss */
+  .prop-content .overlay {
+    height: 230px;
+    width: 240px;
+  }
+  /* line 144, ../sass/_responsive.scss */
+  .prop-content .slick-slider img {
+    max-width: 260px;
+  }
+
+  /* line 151, ../sass/_responsive.scss */
+  .single-property .pan-frame img {
+    top: 27px;
+    height: 203px;
+    width: 256px;
+  }
+}
