@@ -1,4 +1,4 @@
-	<?php //if
+	<?php 
 		$curr_page = get_post();
 		if($curr_page->ID === 5):
 			echo '<div class="logo-divider"></div>';
@@ -46,7 +46,7 @@
 		</div>
 
 		<!-- Modal -->
-		<div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade interested" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -54,10 +54,7 @@
 						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
 					</div>
 					<div class="modal-body">
-						<?php
-							echo do_shortcode(apply_filters("the_content", "[contact-form-7 id='14' title='General Contact']"));
-						//echo do_shortcode([[contact-form-7 id="14" title="General Contact"]]);
-						?>
+						<?php echo do_shortcode(apply_filters("the_content", "[contact-form-7 id='14' title='General Contact']")); ?>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -75,9 +72,10 @@
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/bootstrap/tooltip.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/slick/slick.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/random.js"></script>
+		<?php echo $type; ?>
 		<script>
 			$(document).ready(function() {
-				setNavigation('<?php echo $_GET['type']; ?>', '<?php echo $wp_query->query_vars['borough'] ?>');
+				setNavigation('<?php echo $wp_query->query_vars['type'] ?>', '<?php echo $wp_query->query_vars['borough'] ?>');
 				slider('.home-slider');
 				slider('.mid-page');
 				slider('.collapse-content');
@@ -136,7 +134,31 @@
 				}
 
 			});
+			//Conditional for insurance and property management pages
+			if('<?php echo $curr_page->ID; ?>' === '54'){
+				$(".property").addClass('active');
+			}
+			else if('<?php echo $curr_page->ID; ?>' === '52'){
+				$(".insurance").addClass('active');
+			}
 
+			//Conditional for rentals and sales pages
+			if('<?php echo $curr_page->ID; ?>' === '46'){
+				$(".rentals").addClass('active');
+			}
+			else if('<?php echo $curr_page->ID; ?>' === '48'){
+				$(".sales").addClass('active');
+			}
+			//Conditional for guides pages
+			if('<?php echo $curr_page->ID; ?>' === '56'){
+				$(".rentals").addClass('active');
+			}
+			else if('<?php echo $curr_page->ID; ?>' === '58'){
+				$(".sales").addClass('active');
+			}
+			else if('<?php echo $curr_page->ID; ?>' === '60'){
+				$(".mortgage").addClass('active');
+			}
 </script>
 
 	</body>

@@ -1,8 +1,5 @@
 //Full Screen Menu dropdowns
-$("#list-link").hover(function() {
-	$("#list").toggle();
-	$(".submenu").toggle();
-});
+
 $("#services-link").hover(function() {
 	$("#services").toggle();
 	$(".submenu").toggle();
@@ -11,7 +8,10 @@ $("#resources-link").hover(function() {
 	$("#resources").toggle();
 	$(".submenu").toggle();
 });
-
+$("#list-link").hover(function() {
+	$("#list").toggle();
+	$(".submenu").toggle();
+});
 //Property's Page collapse
 $('.collapse.single-prop').on('show.bs.collapse', function() {
 	var $openTarget = "#" + $(this).attr('id');

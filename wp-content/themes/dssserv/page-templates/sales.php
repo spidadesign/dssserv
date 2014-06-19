@@ -14,8 +14,8 @@
 	<div class="ps-options">
 		<div class="container">
 			Select Type:
-			<a class="btn btn-default" href="<?php echo site_url(); ?>/rentals">Rentals</a>
-			<a class="btn btn-default active" href="<?php echo site_url(); ?>/sales">Sales</a>
+			<a class="btn btn-default rentals" href="<?php echo site_url(); ?>/rentals">Rentals</a>
+			<a class="btn btn-default sales" href="<?php echo site_url(); ?>/sales">Sales</a>
 		</div>
 	</div>
 	<div class="content">

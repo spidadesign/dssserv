@@ -56,11 +56,11 @@ get_header();
 			Current Properties
 		</div>
 		<div class="row top-bar">
-			<div class="col-md-1 number">#</div>
-			<div class="col-md-1">Unit</div>
-			<div class="col-md-1">Bdrm</div>
-			<div class="col-md-1">Baths</div>
-			<div class="col-md-1 col-md-offset-1">Price</div>
+			<div class="col-md-1 col-xs-2 number">#</div>
+			<div class="col-md-1 col-xs-2">Unit</div>
+			<div class="col-md-1 col-xs-2">Bdrm</div>
+			<div class="col-md-1 col-xs-2">Baths</div>
+			<div class="col-md-1 col-md-offset-1 col-xs-2 col-xs-offset-0">Price</div>
 		</div>
 
 			<?php
@@ -87,7 +87,7 @@ get_header();
 					echo '<div class="row individual" data-toggle="collapse" data-target="#prop-'.$count.'">';
 				endif;
 				?>
-				<div class="col-md-1 number">
+				<div class="col-md-1 col-xs-2 number">
 					<div class="count">
 						<?php
 							if($count < 10):
@@ -98,16 +98,16 @@ get_header();
 						?>
 					</div>
 				</div>
-				<div class="col-md-1">
+				<div class="col-md-1 col-xs-2">
 					<?php the_title(); ?>
 				</div>
-				<div class="col-md-1">
+				<div class="col-md-1 col-xs-2">
 					<?php echo $custom['bedrooms'][0]; ?>
 				</div>
-				<div class="col-md-1">
+				<div class="col-md-1 col-xs-2">
 					<?php echo $custom['bathrooms'][0]; ?>
 				</div>
-				<div class="col-md-1 col-md-offset-1">
+				<div class="col-md-1 col-md-offset-1 col-xs-2 col-xs-offset-0">
 					$<?php echo $custom['price'][0]; ?>
 				</div>
 				<div class="col-md-1 col-md-offset-5">

@@ -40,6 +40,12 @@
 			list-style-type: none;
 		}
 	}
+	a{
+		color: #8f8d88;
+		&:hover{
+			color: #606060
+		}
+	}
 }
 .neighborhood-content{
 	.row{
@@ -79,12 +85,33 @@
 		height:380px;
 		width:80px;
 		top:4%;
+		z-index: 1;
+		&:before{
+			content:none;
+		}
 	};
 	.slick-next{
-		background-imgae: url(../images/next-default.png);
+		background-image: url("../images/guide-next-default.png");
+		color:transparent;
+		right: 27px;	
+		&:hover{
+			background-image: url("../images/guide-next-hover.png");
+		}
 	}
-	.slick-next{}
+	.slick-prev{
+		background-image: url("../images/previous-default.png");
+		color:transparent;
+		//right: 27px;	
+		&:hover{
+			background-image: url("../images/previous-hover.png");
+		}
+	}
 	.slick-dots{
 		bottom:-45px;
+	}
+}
+.trains{
+	span{
+		display:block;
 	}
 }

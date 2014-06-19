@@ -1,6 +1,8 @@
 <?php
 /*
 Template Name: Property
+
+The custom array key random_219 is the type of property it is, rental or sale
 */
 get_header();
 $count = 1;
@@ -15,7 +17,13 @@ if (have_posts()) : while (have_posts()) : the_post();
 			<a href="<?php echo site_url();?>/property-search">Back to Listings</a>
 		</div>
 	</div>
-	<div class="breadcrumbs"></div>
+	<div class="breadcrumbs">
+		<a href="<?php echo site_url();?>">Home</a>
+		<?php 
+			echo " - <a href='".site_url()."/property-search/".strtolower($custom['borough'][0])."/".strtolower($custom['random_219'][0])."'>".
+			ucwords(strtolower($custom['random_219'][0]))."</a> - <a href='".site_url()."'>".get_the_title()."</a>";
+		?>
+	</div>
 </div>
 <div class="single-housing">
 	<div class="pref beige"></div>

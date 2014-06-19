@@ -2,20 +2,31 @@
 /*
 Template Name: Property
 */
+
+global $wp_query;
 get_header();
-	//global $wp_rewrite;
-	//echo "<pre>"; print_r($wp_rewrite->rules); echo "</pre>";
+
 $borough = $wp_query->query_vars['borough'];
+$currURL =  $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
+$currURL = explode('/', $currURL);
+foreach($currURL as $url):
+	if($url === 'rental'):
+		$type = 'rental';
+	elseif($url === 'sale'):
+		$type = 'sale';
+	endif;
+endforeach;
+$wp_query->query_vars['type'] = $type;
+$boroughURL = $borough;
 if($borough === 'staten_island'):
+		
 		$island = explode('_',$borough);
 		$island = implode(' ', $island);
 		$borough = sanitize_text_field(ucwords(strtolower($island)));
 	else:
 		$borough = sanitize_text_field(ucwords(strtolower($borough)));
 	endif;
-	if(isset($_GET['type'])):
-		$type = sanitize_text_field($_GET['type']);
-	endif;
+	$currURL = implode('/', $currURL);
 	$sort = sanitize_text_field($_GET['sort']);
 	$order = sanitize_text_field($_GET['order']);
 		$args = array(
@@ -32,8 +43,7 @@ if($borough === 'staten_island'):
 			array('key' => 'bathrooms', 'value'=>'Exclusive', 'compare' => 'NOT LIKE')
 			)
 		);
-
-	$loop = new WP_Query( $args );
+			$loop = new WP_Query( $args );
 	$listingCount = $loop->post_count;
 	$count = 1;
 ?>
@@ -41,20 +51,30 @@ if($borough === 'staten_island'):
 	<div class="page-title">
 		<h3><?php the_title(); ?></h3>
 	</div>
-	<div class="breadcrumbs"></div>
+	<div class="breadcrumbs">
+		<a href="<?php echo site_url();?>">Home</a>
+		<?php 
+			if($borough):
+				echo " - <a href='".site_url()."/property-search/".strtolower($borough)."'>".$borough."</a>";
+			endif;
+			if($type):
+				echo " - <a href='$currURL'>".ucwords(strtolower($type))."</a>";
+			endif;
+		?>
+	</div>
 </div>
 <div class="ps-options">
 	<div class="container">
 		<span>Select Type:</span>
-			<a class="btn btn-default" href="?type=rental" id="rental">Rental</a>
-			<a class="btn btn-default" href="?type=sale" id="sale">Sale</a>
+			<a class="btn btn-default" href="<?php echo site_url();?>/property-search/<?php echo $boroughURL; ?>/rental/" id="rental">Rental</a>
+			<a class="btn btn-default" href="<?php echo site_url();?>/property-search/<?php echo $boroughURL; ?>/sale/" id="sale">Sale</a>
 		<div class="fr">
 			<span>Select Area:</span>
-			<a type="button" class="btn btn-default b-name" id="manhattan" href="<?php echo site_url();?>/property-search/borough/manhattan">Manhattan</a>
-			<a type="button" class="btn btn-default b-name" id="bronx" href="<?php echo site_url();?>/property-search/borough/bronx">Bronx</a>
-			<a type="button" class="btn btn-default b-name" id="brooklyn" href="<?php echo site_url();?>/property-search/borough/brooklyn">Brooklyn</a>
-			<a type="button" class="btn btn-default b-name" id="queens" href="<?php echo site_url();?>/property-search/borough/queens">Queens</a>
-			<a type="button" class="btn btn-default b-name" id="staten_island" href="<?php echo site_url();?>/property-search/borough/staten_island">Staten Island</a>
+			<a type="button" class="btn btn-default b-name" id="manhattan" href="<?php echo site_url();?>/property-search/manhattan">Manhattan</a>
+			<a type="button" class="btn btn-default b-name" id="bronx" href="<?php echo site_url();?>/property-search/bronx">Bronx</a>
+			<a type="button" class="btn btn-default b-name" id="brooklyn" href="<?php echo site_url();?>/property-search/brooklyn">Brooklyn</a>
+			<a type="button" class="btn btn-default b-name" id="queens" href="<?php echo site_url();?>/property-search/queens">Queens</a>
+			<a type="button" class="btn btn-default b-name" id="staten_island" href="<?php echo site_url();?>/property-search/staten_island">Staten Island</a>
 		</div>
 	</div>
 </div>
@@ -209,4 +229,4 @@ if($borough === 'staten_island'):
 	</div>
 </div>
 
-<?php get_footer()?>
+<?php get_footer(); ?>

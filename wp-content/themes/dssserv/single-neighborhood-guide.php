@@ -8,12 +8,27 @@ $args = array(
 	'hide_empty' => '0',
 	'parent' => '7'
 );
+$guide = explode('-', $guide);
+foreach($guide as $guides):
+	ucwords(strtolower($guides));
+endforeach;
+echo "<pre>"; print_r($guide); echo "</pre>";
 $categories = get_categories( $args );
 ?>
 <div class="container">
 	<div class="page-title">
 		<h3><?php echo $guide; ?> Neighborhood Guide</h3>
-		<div class="breadcrumbs"></div>
+		<div class="breadcrumbs">
+			<a href="<?php echo site_url();?>">Home</a>
+			<?php 
+				if($borough):
+					echo " - <a href='".site_url()."/property-search/".strtolower($borough)."'>".$borough."</a>";
+				endif;
+				if($type):
+					echo " - <a href='$currURL'>".ucwords(strtolower($type))."</a>";
+				endif;
+			?>
+		</div>
 	</div>
 </div>
 <div class="guide">

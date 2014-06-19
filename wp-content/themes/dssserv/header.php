@@ -44,8 +44,8 @@
 							<img src="<?php bloginfo('template_directory'); ?>/assets/images/main-logo.png" alt="DSS Services" class="img-responsive">
 						</a>
 						<div class="navbar-collapse collapse">
-							<ul class="nav navbar-nav visible-sm visible-xs">
-								<li><a href="<?php echo site_url(); ?>/property-search">Property Search</a></li>
+							<!--<ul class="nav navbar-nav visible-sm visible-xs">
+								<li><a href="<?php echo site_url(); ?>/property-search/manhattan/rental">Property Search</a></li>
 								<li class="inline-accordion">
 									<div class="panel-group" id="accordion">
 										<div class="panel panel-default">
@@ -69,9 +69,9 @@
 								<li><a>Resources</a></li>
 								<li><a href="<?php echo site_url();?>/about-us">About</a></li>
 								<li><a href="#" data-toggle="modal" data-target="#contact">Contact</a></li>
-							</ul>
+							</ul>-->
 							<ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
-								<li><a href="<?php echo site_url(); ?>/property-search">Property Search</a></li>
+								<li><a href="<?php echo site_url(); ?>/property-search/manhattan/rental">Property Search</a></li>
 								<li id="list-link"><a>List With Us</a></li>
 								<li><a id="services-link">Services</a></li>
 								<li><a id="resources-link">Resources</a></li>
@@ -85,7 +85,7 @@
 			<div class="submenu">
 
 				<div class="container">
-				<ul id="list">
+				<ul id="list" style="display:none;">
 					<li><a href="<?php echo site_url();?>/rentals">Rentals</a></li>
 					<li><a href="<?php echo site_url();?>/sales">Sales</a></li>
 				</ul>
@@ -94,7 +94,7 @@
 					<li><a href="<?php echo site_url();?>/insurance">Insurance</a></li>
 				</ul>
 				<ul id="resources">
-					<li><a href="<?php echo site_url();?>/neighborhood-guide">Neighborhood Guide</a></li>
+					<li><a href="<?php echo site_url();?>/neighborhood-guide/harlem">Neighborhood Guide</a></li>
 					<li><a href="<?php echo site_url();?>/mortgage-guide">Mortgage Guide</a></li>
 					<li><a href="<?php echo site_url();?>/sellers-guide">Seller's Guide</a></li>
 					<li><a href="<?php echo site_url();?>/renters-guide">Renter's Guide</a></li>

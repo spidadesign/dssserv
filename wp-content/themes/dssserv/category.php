@@ -19,12 +19,25 @@
 			unset($custom['_edit_last']);
 			unset($custom['_edit_lock']);
 			unset($custom['_wp_old_slug']);
-			//echo "<pre>"; print_r($custom); echo "</pre>";
+			$guide = explode('-', $guide);
+			$guideCount = 0;
+		foreach($guide as $guides):
+			$guide[$guideCount] = ucwords(strtolower($guides));
+			$guideCount++;
+		endforeach;
+		$categories = get_categories( $args );
+		$guide = implode(' ', $guide);
 	?>
 		<div class="container">
 			<div class="page-title">
 				<h3><?php echo $guide; ?> Neighborhood Guide</h3>
-				<div class="breadcrumbs"></div>
+				<div class="breadcrumbs">
+			<a href="<?php echo site_url();?>">Home</a>
+			<?php 
+				echo " - <a href='".site_url()."/neighborhood-guide/harlem'>Neighborhood Guide</a> - <a href=''>".$guide."</a>";
+			?>
+		</div>
+	</div>
 			</div>
 		</div>
 		<div class="guide">
@@ -101,10 +114,10 @@
 					<?php endforeach; ?>
 					<div class="trains row">
 					<div class="title">Transportation</div>
-					Subway:
+					<span>Subway:</span>
 					<?php
-						$tagArg = array('orderby'=>'desc');
-						$tags = get_tags($tagArg);
+						//$tagArg = array('orderby'=>'desc');
+						$tags = get_the_tags();
 						foreach($tags as $tag):
 					?>
 						<img src="<?php echo get_template_directory_uri().'/assets/images/trains/'.strtoupper($tag->name).'.jpg';?>">

@@ -165,4 +165,8 @@
 		display: block !important;
 	}
 }
-
+#resources-link, #list-link, #services-link{
+	&:hover{
+		cursor: pointer;
+	}
+}

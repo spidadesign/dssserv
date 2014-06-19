@@ -14,8 +14,8 @@
 	<div class="ps-options">
 		<div class="container">
 			Select Type:
-			<a class="btn btn-default active" href="<?php echo site_url(); ?>/insurance">Insurance</a>
-			<a class="btn btn-default" href="<?php echo site_url(); ?>/property-management">Property Management</a>
+			<a class="btn btn-default insurance" href="<?php echo site_url(); ?>/insurance">Insurance</a>
+			<a class="btn btn-default property" href="<?php echo site_url(); ?>/property-management">Property Management</a>
 		</div>
 	</div>
 	<div class="content">
