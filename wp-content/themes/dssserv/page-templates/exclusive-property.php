@@ -15,7 +15,7 @@ get_header();
 		<div class="container">
 			<div class="row">
 				<?php
-					$currProp = sanitize_text_field($_GET['location']);
+					$currProp = sanitize_text_field($wp_query->query_vars['location']);
 					$args = array(
 						'post_type' => 'property',
 						'posts_per_page' => 1,
@@ -79,6 +79,7 @@ get_header();
 			$loop = new WP_Query( $args );
 			$listingCount = $loop->post_count;
 			$count = 1;
+
 			while ( $loop->have_posts() ) : $loop->the_post();
 				$custom = get_post_custom(get_the_ID());
 			if($count === $listingCount):
@@ -155,8 +156,9 @@ get_header();
 								Apartment <?php the_title(); ?>
 							</div>
 							<div class="fr">
-								<a type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#interested<?php echo $count; ?>">
-									Interested in this apartment?
+								<!--<a type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#interested<?php echo $count; ?>">
+									Interested in this apartment?-->
+									<a href="<?php the_permalink(); ?>">Learn More</a>
 								</a>
 							</div>
 						</div>

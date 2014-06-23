@@ -8,11 +8,21 @@ get_header();
 $count = 1;
 if (have_posts()) : while (have_posts()) : the_post();
 		$custom = get_post_custom(get_the_ID());
+		$postData = get_post();
+		echo "<pre>"; print_r($postData); echo "</pre>";
+		
 ?>
 
 <div class="container">
 	<div class="page-title">
-		<h3><?php the_title(); ?></h3>
+		<?php
+			if($postData->is_child === '1'):
+				$parent_title = $post_data->parent_title;
+				//ecjo
+			else:
+				echo "<h3>".get_the_title()."</h3>";
+			endif;
+		?>
 		<div class="back">
 			<a href="<?php echo site_url();?>/property-search">Back to Listings</a>
 		</div>

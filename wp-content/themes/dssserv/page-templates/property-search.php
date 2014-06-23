@@ -68,6 +68,7 @@ if($borough === 'staten_island'):
 		<span>Select Type:</span>
 			<a class="btn btn-default" href="<?php echo site_url();?>/property-search/<?php echo $boroughURL; ?>/rental/" id="rental">Rental</a>
 			<a class="btn btn-default" href="<?php echo site_url();?>/property-search/<?php echo $boroughURL; ?>/sale/" id="sale">Sale</a>
+			<a class="btn btn-default" href="<?php echo site_url();?>/exclusive" id="sale">Exclusive Properties</a>
 		<div class="fr">
 			<span>Select Area:</span>
 			<a type="button" class="btn btn-default b-name" id="manhattan" href="<?php echo site_url();?>/property-search/manhattan">Manhattan</a>

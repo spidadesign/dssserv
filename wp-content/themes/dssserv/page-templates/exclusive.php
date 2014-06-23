@@ -10,7 +10,14 @@ get_header();
 	</div>
 	<div class="breadcrumbs"></div>
 </div>
-
+<div class="ps-options">
+	<div class="container">
+		<span>Select Type:</span>
+			<a class="btn btn-default" href="<?php echo site_url();?>/property-search/<?php echo $boroughURL; ?>/rental/" id="rental">Rental</a>
+			<a class="btn btn-default" href="<?php echo site_url();?>/property-search/<?php echo $boroughURL; ?>/sale/" id="sale">Sale</a>
+			<a class="btn btn-default exclusive-link" href="<?php echo site_url();?>/exclusive">Exclusive Properties</a>
+	</div>
+</div>
 <div class="exclusive-body">
 	<div class="pref beige"></div>
 	<div class="container">

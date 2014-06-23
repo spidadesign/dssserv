@@ -63,7 +63,7 @@
 			    </div>
 			  </div>
 			</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/jquery-1.11.0.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/nivo-lightbox/nivo-lightbox.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/bootstrap/dropdown.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/bootstrap/modal.js"></script>
@@ -148,6 +148,9 @@
 			}
 			else if('<?php echo $curr_page->ID; ?>' === '48'){
 				$(".sales").addClass('active');
+			}
+			else if('<?php echo $curr_page->ID; ?>' === '78'){
+				$("a.exclusive-link").addClass('active');
 			}
 			//Conditional for guides pages
 			if('<?php echo $curr_page->ID; ?>' === '56'){
