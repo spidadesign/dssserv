@@ -1,0 +1,165 @@
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
+	.top-home{
+		margin-top:170px;
+		.home-slider{
+			img{
+				height:auto;
+			}
+		}
+	}
+	.navbar{
+		height: 115px;
+	}
+	.navbar-collapse{
+		min-width: 320px;
+		position: relative;
+		left: -30px;
+		top: -55px;
+		height: auto;
+		background-color: white !important;
+		}
+	.navbar{
+		&.navbar-default{
+			.collapse{
+				background-color:white !important;
+			}
+		}
+	}
+	.exc-img{
+		img{
+			width: 260px;
+			height: 270px;
+
+		}
+	}
+	.pan_frame{
+		img{
+			width: 260px;
+			height: 270px;
+		}
+	}
+	.middle-home{
+		.slick-slider{
+			height: 320px;
+		}
+	}
+	.prop-content{
+		.pan_frame{
+			img{
+				width: 260px;
+			}
+		}
+		hr{
+			margin-top: 15px;
+			&.share{
+				margin-top: 15px;
+			}
+		}
+		.overlay{
+			height: 230px;
+			width: 240px;
+		}
+		.slick-slider{
+			img{
+				max-width: 260px;
+			}
+		}
+	}
+	.single-property{
+		.pan-frame{
+			img{
+				top: 27px;
+				height: 203px;
+				width: 255px;
+			}
+		}
+		.content{
+			margin-bottom: 30px;
+		}
+		a{
+			&.btn{
+				margin-left: 45px;
+			}
+		}
+		.fr{
+			&.contact{
+				margin-right: 50px;
+			}
+		}
+		.single-housing{
+			padding-bottom: 20px;
+		}
+	}
+	.overlay{
+		top: -23px;
+		height: 190px;
+		width: 234px;
+	}
+	.addthis_32x32_style{
+		margin-top: -5px;
+	}
+	.exclusive{
+		.prop-desc{
+			.col-md-4{
+				text-align: center;
+			}
+		}
+		.title{
+			text-align: center;
+		}
+		.content{
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.prop-content{
+			.title{
+				text-align: center; 
+			}
+		}
+		.single-prop{
+			.fl, .fr{
+				float:none;	
+			}
+			.fr{
+				text-align: center;
+			}
+		}
+	}
+
+	//Modal
+	.modal-content{
+		max-width: 300px;
+		max-height: 550px;
+	}
+	.interested{
+		background-image: none;
+		.row{
+			input{
+				width: auto;
+				margin-left: auto !important;
+			}
+		}
+	}
+	.single-property{
+		.modal{
+			.modal-dialog{
+				width: auto;
+			}
+			.modal-body{
+				background-image: none;
+				
+			}
+			.modal-header{
+				height: 200px;
+				.modal-title{
+					h4{
+						font-size: 20px;
+					}
+					h3{
+						font-size: 30px;
+					}
+				}
+			}
+		}
+	}
+}

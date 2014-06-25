@@ -29,10 +29,10 @@ get_header();
 					while ( $loop->have_posts() ) : $loop->the_post();
 						$id = get_the_ID();
 					?>
-					<div class="col-md-4">
+					<div class="col-md-4 col-xs-5">
 						<?php echo the_post_thumbnail('large'); ?>
 					</div>
-					<div class="col-md-8">
+					<div class="col-md-8 col-xs-6">
 						<div class="row title">
 							<?php echo the_title(); ?>
 						</div>

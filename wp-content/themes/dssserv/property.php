@@ -6,10 +6,11 @@ The custom array key random_219 is the type of property it is, rental or sale
 */
 get_header();
 $count = 1;
+$query = new WP_Query();
 if (have_posts()) : while (have_posts()) : the_post();
 		$custom = get_post_custom(get_the_ID());
 		$postData = get_post();
-		echo "<pre>"; print_r($postData); echo "</pre>";
+		//echo "<pre>"; print_r($postData); echo "</pre>";
 		
 ?>
 
@@ -17,14 +18,18 @@ if (have_posts()) : while (have_posts()) : the_post();
 	<div class="page-title">
 		<?php
 			if($postData->is_child === '1'):
-				$parent_title = $post_data->parent_title;
-				//ecjo
+				//$parent_title = simple_fields_value('parent_title');
+				echo "<h3>".$postData->parent_title."-Apartment ".get_the_title( )."</h3>";
 			else:
 				echo "<h3>".get_the_title()."</h3>";
 			endif;
 		?>
 		<div class="back">
-			<a href="<?php echo site_url();?>/property-search">Back to Listings</a>
+			<?php if($custom['random_8'][0] === 'Exclusive'): ?>
+					<a href="<?php echo site_url();?>/exclusive">Back to Listings</a>
+			<?php else:	?>
+				<a href="<?php echo site_url();?>/property-search">Back to Listings</a>
+			<?php endif; ?>
 		</div>
 	</div>
 	<div class="breadcrumbs">
@@ -133,7 +138,15 @@ if (have_posts()) : while (have_posts()) : the_post();
 			</div>
 			<div class="pref beige"></div>
 			<div class="modal-body">
-				<p>I am interested in <span><?php the_title(); ?></span> at <span><?php echo $custom['location'][0]; ?></span></p>
+				<p>I am interested in <span><?php the_title(); ?></span> at <span>
+				<?php 
+					if($custom['random_8'][0] === "Exclusive"):
+						echo $postData->parent_title; 
+					else:
+						echo $custom['location'][0]; 
+					endif;
+					?>
+					</span></p>
 				<div class="col-md-2 col-md-offset-5"><hr></div>
 				<?php echo do_shortcode(apply_filters("the_content", '[contact-form-7 id="45" title="Property Information"]')); ?>
 			</div>

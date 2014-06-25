@@ -8965,7 +8965,7 @@ a {
 }
 /* line 45, ../sass/_exclusive.scss */
 .exclusive .prop-desc .title {
-  color: #f6f4f2;
+  color: #fff;
   font-size: 26px;
   margin-bottom: 20px;
 }
@@ -8981,7 +8981,7 @@ a {
 }
 /* line 62, ../sass/_exclusive.scss */
 .exclusive .title {
-  color: #454546 !important;
+  color: #454546;
   margin-top: 0;
 }
 /* line 67, ../sass/_exclusive.scss */
@@ -9191,6 +9191,11 @@ a {
 /* line 114, ../sass/_guide.scss */
 .trains span {
   display: block;
+}
+
+/* line 119, ../sass/_guide.scss */
+.page-title h3 {
+  font-size: 22px;
 }
 
 /* line 1, ../sass/_footer.scss */
@@ -9712,7 +9717,7 @@ body {
 }
 /* line 265, ../sass/styles.scss */
 .pan_frame a {
-  top: 15px;
+  top: 10px;
   left: 0;
   right: 0;
   margin: auto;
@@ -9763,101 +9768,147 @@ body {
 }
 
 @media (min-device-width: 320px) and (max-device-width: 568px) {
-  /* line 5, ../sass/_responsive.scss */
+  /* line 3, ../sass/responsive/iphone/_all.scss */
+  .guide-img.slick-slider {
+    margin-bottom: 40px;
+  }
+  /* line 6, ../sass/responsive/iphone/_all.scss */
+  .guide-img .slick-next {
+    right: 0;
+  }
+
+  /* line 10, ../sass/responsive/iphone/_all.scss */
+  .neighborhoods {
+    margin: auto;
+  }
+
+  /* line 19, ../sass/responsive/iphone/_all.scss */
+  .navbar-nav .panel-group .panel {
+    border-radius: 0;
+    border-top: 3px transparent solid;
+    border-bottom: 3px transparent solid;
+    box-shadow: none;
+  }
+  /* line 25, ../sass/responsive/iphone/_all.scss */
+  .navbar-nav .panel-group .panel a:hover {
+    text-decoration: none;
+  }
+  /* line 30, ../sass/responsive/iphone/_all.scss */
+  .navbar-nav .panel-group .panel .panel-collapse li {
+    list-style-type: none;
+  }
+  /* line 34, ../sass/responsive/iphone/_all.scss */
+  .navbar-nav .panel-group .panel:hover {
+    border-top: 3px #336699 solid;
+    border-bottom: 3px #336699 solid;
+  }
+
+  /* line 45, ../sass/responsive/iphone/_all.scss */
+  .navbar.navbar-default ul.navbar-nav > li {
+    height: auto;
+  }
+  /* line 48, ../sass/responsive/iphone/_all.scss */
+  .navbar.navbar-default ul.navbar-nav > li.inline-accordion:hover {
+    border-top: 3px transparent solid;
+    border-bottom: 3px transparent solid;
+  }
+
+  /* line 64, ../sass/responsive/iphone/_all.scss */
   .listings .col-xs-1, .listings .col-xs-2, .listings .col-xs-3 {
     padding-left: 1px;
   }
-  /* line 8, ../sass/_responsive.scss */
+  /* line 67, ../sass/responsive/iphone/_all.scss */
   .listings .number {
     padding-left: 0;
   }
-  /* line 14, ../sass/_responsive.scss */
+  /* line 73, ../sass/responsive/iphone/_all.scss */
   .listings button.btn.btn-default.selected {
     background: url(../images/prop-close-small.png) no-repeat center center;
     height: 30px;
     width: 30px;
   }
 
-  /* line 24, ../sass/_responsive.scss */
+  /* line 83, ../sass/responsive/iphone/_all.scss */
   .ps-options span {
     display: block;
+    margin-left: 10px;
   }
 
-  /* line 29, ../sass/_responsive.scss */
+  /* line 89, ../sass/responsive/iphone/_all.scss */
   .navbar-brand img {
     position: absolute;
     left: 10px;
     top: 55px;
   }
 
-  /* line 35, ../sass/_responsive.scss */
+  /* line 95, ../sass/responsive/iphone/_all.scss */
   .big-space {
     display: none;
   }
 
-  /* line 38, ../sass/_responsive.scss */
+  /* line 98, ../sass/responsive/iphone/_all.scss */
   .footer {
     height: auto;
     padding-top: 0;
   }
-  /* line 41, ../sass/_responsive.scss */
+  /* line 101, ../sass/responsive/iphone/_all.scss */
   .footer .top {
     margin-bottom: 15px;
   }
 
-  /* line 45, ../sass/_responsive.scss */
+  /* line 105, ../sass/responsive/iphone/_all.scss */
   .exc-img {
     width: auto !important;
     height: auto !important;
   }
-  /* line 49, ../sass/_responsive.scss */
+  /* line 109, ../sass/responsive/iphone/_all.scss */
   .exc-img.map .background {
     display: none;
   }
 
-  /* line 56, ../sass/_responsive.scss */
+  /* line 116, ../sass/responsive/iphone/_all.scss */
   .bottom-home .content hr {
     margin-top: 10px;
     margin-bottom: 10px;
   }
 
-  /* line 62, ../sass/_responsive.scss */
+  /* line 122, ../sass/responsive/iphone/_all.scss */
   .city {
     display: none;
   }
 
-  /* line 65, ../sass/_responsive.scss */
+  /* line 125, ../sass/responsive/iphone/_all.scss */
   .header {
     max-height: 160px;
     height: auto;
   }
 
-  /* line 70, ../sass/_responsive.scss */
+  /* line 130, ../sass/responsive/iphone/_all.scss */
   .wpcf7 .text {
     text-align: center;
   }
 
-  /* line 75, ../sass/_responsive.scss */
+  /* line 135, ../sass/responsive/iphone/_all.scss */
   .wpcf7-form-control.wpcf7-submit {
     margin-left: 25px;
   }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
-  /* line 83, ../sass/_responsive.scss */
+  /* line 2, ../sass/responsive/iphone/_portrait.scss */
   .top-home {
     margin-top: 170px;
   }
-  /* line 86, ../sass/_responsive.scss */
+  /* line 5, ../sass/responsive/iphone/_portrait.scss */
   .top-home .home-slider img {
     height: auto;
   }
 
-  /* line 91, ../sass/_responsive.scss */
+  /* line 10, ../sass/responsive/iphone/_portrait.scss */
   .navbar {
     height: 115px;
   }
 
-  /* line 94, ../sass/_responsive.scss */
+  /* line 13, ../sass/responsive/iphone/_portrait.scss */
   .navbar-collapse {
     min-width: 320px;
     position: relative;
@@ -9867,156 +9918,321 @@ body {
     background-color: white !important;
   }
 
-  /* line 104, ../sass/_responsive.scss */
+  /* line 23, ../sass/responsive/iphone/_portrait.scss */
   .navbar.navbar-default .collapse {
     background-color: white !important;
   }
 
-  /* line 110, ../sass/_responsive.scss */
+  /* line 29, ../sass/responsive/iphone/_portrait.scss */
   .exc-img img {
     width: 260px;
     height: 270px;
   }
 
-  /* line 117, ../sass/_responsive.scss */
+  /* line 36, ../sass/responsive/iphone/_portrait.scss */
   .pan_frame img {
     width: 260px;
     height: 270px;
   }
 
-  /* line 123, ../sass/_responsive.scss */
+  /* line 42, ../sass/responsive/iphone/_portrait.scss */
   .middle-home .slick-slider {
     height: 320px;
   }
 
-  /* line 129, ../sass/_responsive.scss */
+  /* line 48, ../sass/responsive/iphone/_portrait.scss */
   .prop-content .pan_frame img {
     width: 260px;
   }
-  /* line 133, ../sass/_responsive.scss */
+  /* line 52, ../sass/responsive/iphone/_portrait.scss */
   .prop-content hr {
     margin-top: 15px;
   }
-  /* line 135, ../sass/_responsive.scss */
+  /* line 54, ../sass/responsive/iphone/_portrait.scss */
   .prop-content hr.share {
     margin-top: 15px;
   }
-  /* line 139, ../sass/_responsive.scss */
+  /* line 58, ../sass/responsive/iphone/_portrait.scss */
   .prop-content .overlay {
     height: 230px;
     width: 240px;
   }
-  /* line 144, ../sass/_responsive.scss */
+  /* line 63, ../sass/responsive/iphone/_portrait.scss */
   .prop-content .slick-slider img {
     max-width: 260px;
   }
 
-  /* line 151, ../sass/_responsive.scss */
+  /* line 70, ../sass/responsive/iphone/_portrait.scss */
   .single-property .pan-frame img {
     top: 27px;
     height: 203px;
     width: 255px;
   }
-  /* line 157, ../sass/_responsive.scss */
+  /* line 76, ../sass/responsive/iphone/_portrait.scss */
   .single-property .content {
     margin-bottom: 30px;
   }
-  /* line 161, ../sass/_responsive.scss */
+  /* line 80, ../sass/responsive/iphone/_portrait.scss */
   .single-property a.btn {
     margin-left: 45px;
   }
-  /* line 166, ../sass/_responsive.scss */
+  /* line 85, ../sass/responsive/iphone/_portrait.scss */
   .single-property .fr.contact {
     margin-right: 50px;
   }
-  /* line 170, ../sass/_responsive.scss */
+  /* line 89, ../sass/responsive/iphone/_portrait.scss */
   .single-property .single-housing {
     padding-bottom: 20px;
   }
 
-  /* line 174, ../sass/_responsive.scss */
+  /* line 93, ../sass/responsive/iphone/_portrait.scss */
   .overlay {
     top: -23px;
     height: 190px;
     width: 234px;
   }
 
-  /* line 179, ../sass/_responsive.scss */
+  /* line 98, ../sass/responsive/iphone/_portrait.scss */
   .addthis_32x32_style {
     margin-top: -5px;
   }
 
-  /* line 182, ../sass/_responsive.scss */
-  .page-title {
-    position: relative;
-    z-index: 7;
-  }
-
-  /* line 188, ../sass/_responsive.scss */
+  /* line 103, ../sass/responsive/iphone/_portrait.scss */
   .exclusive .prop-desc .col-md-4 {
     text-align: center;
   }
-  /* line 192, ../sass/_responsive.scss */
+  /* line 107, ../sass/responsive/iphone/_portrait.scss */
   .exclusive .title {
     text-align: center;
   }
-  /* line 195, ../sass/_responsive.scss */
+  /* line 110, ../sass/responsive/iphone/_portrait.scss */
   .exclusive .content {
     padding-left: 10px;
     padding-right: 10px;
   }
-  /* line 200, ../sass/_responsive.scss */
+  /* line 115, ../sass/responsive/iphone/_portrait.scss */
   .exclusive .prop-content .title {
     text-align: center;
   }
-  /* line 205, ../sass/_responsive.scss */
+  /* line 120, ../sass/responsive/iphone/_portrait.scss */
   .exclusive .single-prop .fl, .exclusive .single-prop .fr {
     float: none;
   }
-  /* line 208, ../sass/_responsive.scss */
+  /* line 123, ../sass/responsive/iphone/_portrait.scss */
   .exclusive .single-prop .fr {
     text-align: center;
   }
 
-  /* line 215, ../sass/_responsive.scss */
+  /* line 130, ../sass/responsive/iphone/_portrait.scss */
   .modal-content {
     max-width: 300px;
     max-height: 550px;
   }
 
-  /* line 219, ../sass/_responsive.scss */
+  /* line 134, ../sass/responsive/iphone/_portrait.scss */
   .interested {
     background-image: none;
   }
-  /* line 222, ../sass/_responsive.scss */
+  /* line 137, ../sass/responsive/iphone/_portrait.scss */
   .interested .row input {
     width: auto;
     margin-left: auto !important;
   }
 
-  /* line 230, ../sass/_responsive.scss */
+  /* line 145, ../sass/responsive/iphone/_portrait.scss */
   .single-property .modal .modal-dialog {
     width: auto;
   }
-  /* line 233, ../sass/_responsive.scss */
+  /* line 148, ../sass/responsive/iphone/_portrait.scss */
   .single-property .modal .modal-body {
     background-image: none;
   }
-  /* line 237, ../sass/_responsive.scss */
+  /* line 152, ../sass/responsive/iphone/_portrait.scss */
   .single-property .modal .modal-header {
     height: 200px;
   }
-  /* line 240, ../sass/_responsive.scss */
+  /* line 155, ../sass/responsive/iphone/_portrait.scss */
   .single-property .modal .modal-header .modal-title h4 {
     font-size: 20px;
   }
-  /* line 243, ../sass/_responsive.scss */
+  /* line 158, ../sass/responsive/iphone/_portrait.scss */
   .single-property .modal .modal-header .modal-title h3 {
     font-size: 30px;
   }
 }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+  /* line 4, ../sass/responsive/iphone/_landscape.scss */
+  .navbar.navbar-default {
+    height: 115px;
+  }
+
+  /* line 9, ../sass/responsive/iphone/_landscape.scss */
+  .white-bg.container {
+    background-color: white;
+    padding: 0;
+  }
+
+  /* line 14, ../sass/responsive/iphone/_landscape.scss */
+  .navbar-collapse {
+    padding: 0;
+  }
+
+  /* line 19, ../sass/responsive/iphone/_landscape.scss */
+  .top-home .slick-dots {
+    left: 75px;
+    bottom: 0;
+  }
+  /* line 24, ../sass/responsive/iphone/_landscape.scss */
+  .top-home .home-slider img {
+    height: 395px;
+  }
+  /* line 27, ../sass/responsive/iphone/_landscape.scss */
+  .top-home .home-slider .caption {
+    top: 175px;
+  }
+  /* line 30, ../sass/responsive/iphone/_landscape.scss */
+  .top-home .home-slider .caption .place .last {
+    font-size: 40px;
+  }
+
+  /* line 38, ../sass/responsive/iphone/_landscape.scss */
+  .middle-home .slick-slider {
+    margin: auto;
+  }
+  /* line 41, ../sass/responsive/iphone/_landscape.scss */
+  .middle-home .exc-img {
+    width: 415px !important;
+    height: 330px !important;
+    margin: auto;
+  }
+  /* line 47, ../sass/responsive/iphone/_landscape.scss */
+  .middle-home h3.title {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* line 56, ../sass/responsive/iphone/_landscape.scss */
+  .ps-options .fr {
+    float: none;
+  }
+
+  /* line 63, ../sass/responsive/iphone/_landscape.scss */
+  .lightbox-gallery .img-responsive {
+    max-width: 425px;
+    margin-left: 45px;
+  }
+
+  /* line 69, ../sass/responsive/iphone/_landscape.scss */
+  .single-property .pan_frame {
+    margin-left: 45px;
+  }
+
+  /* line 76, ../sass/responsive/iphone/_landscape.scss */
+  .home-contact .row label {
+    bottom: auto;
+  }
+
+  /* line 83, ../sass/responsive/iphone/_landscape.scss */
+  .modal-content {
+    max-width: 515px;
+    margin: auto;
+  }
+
+  /* line 87, ../sass/responsive/iphone/_landscape.scss */
+  .interested {
+    background-image: none;
+  }
+  /* line 90, ../sass/responsive/iphone/_landscape.scss */
+  .interested .row input {
+    width: auto;
+    margin-left: auto !important;
+  }
+
+  /* line 98, ../sass/responsive/iphone/_landscape.scss */
+  .single-property .modal .modal-dialog {
+    width: auto;
+  }
+  /* line 101, ../sass/responsive/iphone/_landscape.scss */
+  .single-property .modal .modal-body {
+    background-image: none;
+    height: 515px;
+  }
+  /* line 106, ../sass/responsive/iphone/_landscape.scss */
+  .single-property .modal .modal-header {
+    height: 200px;
+  }
+  /* line 109, ../sass/responsive/iphone/_landscape.scss */
+  .single-property .modal .modal-header .modal-title h4 {
+    font-size: 20px;
+  }
+  /* line 112, ../sass/responsive/iphone/_landscape.scss */
+  .single-property .modal .modal-header .modal-title h3 {
+    font-size: 30px;
+  }
+  /* line 121, ../sass/responsive/iphone/_landscape.scss */
+  .single-property .interested .row input[type="submit"].wpcf7-submit {
+    margin-left: auto !important;
+  }
+
+  /* line 130, ../sass/responsive/iphone/_landscape.scss */
+  .prop-content .slick-slider img {
+    margin-left: 125px;
+  }
+
+  /* line 136, ../sass/responsive/iphone/_landscape.scss */
+  .listings hr {
+    margin-top: 10px;
+  }
+
+  /* line 143, ../sass/responsive/iphone/_landscape.scss */
+  .page-id-78 .wp-post-image {
+    margin-left: 120px;
+  }
+  /* line 146, ../sass/responsive/iphone/_landscape.scss */
+  .page-id-78 .pan_frame {
+    left: 135px;
+  }
+
+  /* line 150, ../sass/responsive/iphone/_landscape.scss */
+  .exclusive-body {
+    padding-bottom: 0;
+  }
+  /* line 153, ../sass/responsive/iphone/_landscape.scss */
+  .exclusive-body .row.title {
+    margin-bottom: 20px;
+  }
+
+  /* line 160, ../sass/responsive/iphone/_landscape.scss */
+  .exclusive .prop-desc {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /* line 163, ../sass/responsive/iphone/_landscape.scss */
+  .exclusive .prop-desc .wp-post-image {
+    max-width: 205px;
+    height: auto;
+  }
+  /* line 169, ../sass/responsive/iphone/_landscape.scss */
+  .exclusive .listings .title {
+    margin-top: 20px;
+  }
+  /* line 172, ../sass/responsive/iphone/_landscape.scss */
+  .exclusive .listings .top-bar {
+    padding-top: 15px;
+  }
+
+  /* line 177, ../sass/responsive/iphone/_landscape.scss */
+  .share {
+    float: left;
+  }
+  /* line 179, ../sass/responsive/iphone/_landscape.scss */
+  .share .addthis_32x32_style {
+    float: right;
+  }
+}
 @media (max-width: 767px) {
-  /* line 252, ../sass/_responsive.scss */
+  /* line 6, ../sass/_responsive.scss */
   .breadcrumbs {
     float: none;
     text-align: center;

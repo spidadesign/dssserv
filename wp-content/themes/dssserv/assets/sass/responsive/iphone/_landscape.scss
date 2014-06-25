@@ -1,0 +1,183 @@
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) { 
+	//general
+	.navbar{
+		&.navbar-default{
+			height: 115px;
+		}
+	}
+	.white-bg{
+		&.container{
+			background-color:white;
+			padding:0
+		}
+	}
+	.navbar-collapse{
+			padding: 0;
+		}
+	//Home
+	.top-home{
+		.slick-dots{
+			left: 75px;
+			bottom: 0;
+		}
+		.home-slider{
+			img{
+				height: 395px;
+			}
+			.caption{
+				top: 175px;
+				.place{
+					.last{
+						font-size: 40px;
+					}
+				}
+			}
+		}
+	}
+	.middle-home{
+		.slick-slider{
+			margin:auto;
+		}
+		.exc-img{
+			width: 415px !important;
+			height: 330px !important;
+			margin: auto;
+		}
+		h3{
+			&.title{
+				margin: auto;
+				margin-top: 20px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+	//Property Search Page
+	.ps-options{
+		.fr{
+			float: none;
+		}
+	}
+
+	//Single Property
+	.lightbox-gallery{
+		.img-responsive{
+			max-width: 425px;
+			margin-left: 45px;
+		}
+	}
+	.single-property{
+		.pan_frame{
+			margin-left: 45px;
+		}
+	}
+	//Contact forms
+	.home-contact{
+		.row{
+			label{
+				bottom:auto;
+			} 	
+		}
+	}
+
+	//Modal
+	.modal-content{
+		max-width: 515px;
+		margin: auto;
+	}
+	.interested{
+		background-image: none;
+		.row{
+			input{
+				width: auto;
+				margin-left: auto !important;
+			}
+		}
+	}
+	.single-property{
+		.modal{
+			.modal-dialog{
+				width: auto;
+			}
+			.modal-body{
+				background-image: none; 
+				height: 515px;	 	 
+				
+			}
+			.modal-header{
+				height: 200px;
+				.modal-title{
+					h4{
+						font-size: 20px;
+					}
+					h3{
+						font-size: 30px;
+					}
+				}
+			}
+		}
+		.interested{
+			.row{
+				input[type="submit"]{
+					&.wpcf7-submit{
+						margin-left:auto !important;
+					}
+				}
+			}
+		}
+	}
+	.prop-content{
+		.slick-slider{
+			img{
+				margin-left: 125px;
+			}
+		}
+	}
+	.listings{
+		hr{
+			margin-top: 10px;
+		}
+	}
+	//End Modal
+	//Start Exclusives Page
+	.page-id-78{
+		.wp-post-image{
+			margin-left: 120px;
+		}
+		.pan_frame{
+			left: 135px;
+		}
+	}
+	.exclusive-body{
+		padding-bottom: 0;
+		.row{
+			&.title{
+				margin-bottom: 20px;
+			}
+		}
+	}
+	//Start Exclusive single listing
+	.exclusive{
+		.prop-desc{
+			padding-top: 20px;
+			padding-bottom: 20px;
+		 	.wp-post-image{
+			 	max-width: 205px;
+				height: auto;
+		 	}
+		}
+		.listings{
+			.title{
+				margin-top: 20px;
+			}
+			.top-bar{
+				padding-top: 15px;
+			}
+		}
+	}
+	.share{
+		float:left;
+		.addthis_32x32_style{
+			float:right;
+		}
+	}
+}

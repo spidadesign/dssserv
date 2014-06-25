@@ -38,38 +38,92 @@
 						</button>
 					</div>
 				</div>
-				<div class="container">
+				<div class="container white-bg">
 					<div class="row">
 						<a class="navbar-brand" href="<?php echo site_url(); ?>">
 							<img src="<?php bloginfo('template_directory'); ?>/assets/images/main-logo.png" alt="DSS Services" class="img-responsive">
 						</a>
 						<div class="navbar-collapse collapse">
-							<!--<ul class="nav navbar-nav visible-sm visible-xs">
-								<li><a href="<?php echo site_url(); ?>/property-search/manhattan/rental">Property Search</a></li>
+							<ul class="nav navbar-nav visible-sm visible-xs">
 								<li class="inline-accordion">
 									<div class="panel-group" id="accordion">
 										<div class="panel panel-default">
-											<div class="panel-heading">
-												<h4 class="panel-title">
-													<a href="#list" data-toggle="collapse" data-parent="#accordion">
+											<a href="<?php echo site_url(); ?>/property-search/manhattan/rental" data-parent="#accordion">
+												<div class="panel-heading">
+													<h4 class="panel-title">
+														Property Search									
+													</h4>
+												</div>
+											</a>
+										</div>
+										<div class="panel panel-default">
+											<a href="#listSm" data-toggle="collapse" data-parent="#accordion">
+												<div class="panel-heading">												
+													<h4 class="panel-title">
 														List With Us <b class="caret"></b>
-													</a>
-												</h4>
-											</div>
-											<div id="list" class="panel-collapse collapse">
+													</h4>
+												</div>
+											</a>
+											<div id="listSm" class="panel-collapse collapse">
 												<ul class="panel-body">
 													<li><a href="<?php echo site_url(); ?>/rentals">Rentals</a></li>
 													<li><a href="<?php echo site_url(); ?>/sales">Sales</a></li>
 												</ul>
 											</div>
 										</div>
+										<div class="panel panel-default">
+											<a href="#servicesSm" data-toggle="collapse" data-parent="#accordion">
+												<div class="panel-heading">
+													<h4 class="panel-title">
+														Services <b class="caret"></b>
+													</h4>
+												</div>
+											</a>
+											<div id="servicesSm" class="panel-collapse collapse">
+												<ul class="panel-body">
+													<li><a href="<?php echo site_url();?>/property-management">Property Management</a></li>
+													<li><a href="<?php echo site_url();?>/insurance">Insurance</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<a href="#resourcesSm" data-toggle="collapse" data-parent="#accordion">
+												<div class="panel-heading">
+													<h4 class="panel-title">
+														Resources <b class="caret"></b>
+													</h4>
+												</div>
+											</a>
+											<div id="resourcesSm" class="panel-collapse collapse">
+												<ul class="panel-body">
+													<li><a href="<?php echo site_url();?>/neighborhood-guide/harlem">Neighborhood Guide</a></li>
+													<li><a href="<?php echo site_url();?>/mortgage-guide">Mortgage Guide</a></li>
+													<li><a href="<?php echo site_url();?>/sellers-guide">Seller's Guide</a></li>
+													<li><a href="<?php echo site_url();?>/renters-guide">Renter's Guide</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="panel panel-default">
+											<a href="<?php echo site_url();?>/about-us" data-parent="#accordion">
+												<div class="panel-heading">
+													<h4 class="panel-title">
+														About
+													</h4>
+												</div>
+											</a>
+										</div>
+										<div class="panel panel-default">
+											<a href="#" data-toggle="modal" data-target="#contact" data-parent="#accordion">
+												<div class="panel-heading">
+													<h4 class="panel-title">
+														Contact
+													</h4>
+												</div>
+											</a>
+										</div>
 									</div>
 								</li>
-								<li><a> Services</a></li>
-								<li><a>Resources</a></li>
-								<li><a href="<?php echo site_url();?>/about-us">About</a></li>
-								<li><a href="#" data-toggle="modal" data-target="#contact">Contact</a></li>
-							</ul>-->
+							</ul>
 							<ul class="nav navbar-nav navbar-right hidden-sm hidden-xs">
 								<li><a href="<?php echo site_url(); ?>/property-search/manhattan/rental">Property Search</a></li>
 								<li id="list-link"><a>List With Us</a></li>

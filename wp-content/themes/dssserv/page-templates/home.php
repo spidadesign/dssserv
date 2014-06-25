@@ -55,9 +55,6 @@ get_header();
 						<img src="<?php bloginfo('template_directory'); ?>/assets/images/img-overlay.png">
 						<a type="button" class="btn btn-default">Search Area</a>
 					</div>
-						<div class="exc-title">
-							<?php the_title(); ?>
-						</div>
 					</div>
 				</div>
 				<?php

@@ -40,7 +40,7 @@ get_header();
 			$title = explode(' ', $title);
 			$link = implode('-', $title);
 		?>
-		<a href="<?php echo site_url().'/exclusive-property/'.'?location='.$link;?>">
+		<a href="<?php echo site_url().'/exclusive-property/'.$link;?>">
 			<div class="row">
 				<?php the_post_thumbnail('large'); ?>
 				<div class="overlay"></div>

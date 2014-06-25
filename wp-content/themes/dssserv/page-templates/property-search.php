@@ -38,7 +38,6 @@ if($borough === 'staten_island'):
 		'meta_query' => array(
 			array('key' => 'borough', 'value' => $borough, 'compare'   => 'LIKE'),
 			array('key' => 'random_219', 'value'=> $type, 'compare'    => 'LIKE'),
-			//array('key' => 'price', 'value' => order, 'compare'   => 'LIKE'),
 			array('key' => 'random_8', 'value'=>'Exclusive', 'compare' => 'NOT LIKE'),
 			array('key' => 'bathrooms', 'value'=>'Exclusive', 'compare' => 'NOT LIKE')
 			)
