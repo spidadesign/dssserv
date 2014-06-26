@@ -76,7 +76,6 @@
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/bootstrap/tooltip.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/plugins/slick/slick.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/javascripts/random.js"></script>
-		<?php echo $type; ?>
 		<script>
 			$(document).ready(function() {
 				setNavigation('<?php echo $wp_query->query_vars['type'] ?>', '<?php echo $wp_query->query_vars['borough'] ?>');

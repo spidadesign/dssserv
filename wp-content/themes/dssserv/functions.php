@@ -10,7 +10,8 @@ function borough_rewrite() {
 add_filter( 'query_vars', 'borough_query_vars' );
 
 function borough_query_vars($query_vars){
-	$query_vars[1] = 'borough';
+	$query_vars[2] = 'borough';
+	$query_vars[1] = 'type';
 	return $query_vars;
 }
 
@@ -19,7 +20,7 @@ add_action('init', 'ex_rewrite');
 function ex_rewrite(){
 	global $wp_rewrite;
 	add_rewrite_rule('exclusive-property/([^/]+)/?', 'index.php?pagename=exclusive-property&location=$matches[1]', 'top');
-	//$wp_rewrite->flush_rules(false);
+	$wp_rewrite->flush_rules(false);
 }
 add_filter(	'query_vars', 'ex_query_vars' );
 function ex_query_vars($query_vars){

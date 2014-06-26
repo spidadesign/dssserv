@@ -5,7 +5,6 @@ Template Name: Property
 
 global $wp_query;
 get_header();
-
 $borough = $wp_query->query_vars['borough'];
 $currURL =  $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 $currURL = explode('/', $currURL);
@@ -42,7 +41,7 @@ if($borough === 'staten_island'):
 			array('key' => 'bathrooms', 'value'=>'Exclusive', 'compare' => 'NOT LIKE')
 			)
 		);
-			$loop = new WP_Query( $args );
+	$loop = new WP_Query( $args );
 	$listingCount = $loop->post_count;
 	$count = 1;
 ?>
@@ -78,6 +77,7 @@ if($borough === 'staten_island'):
 		</div>
 	</div>
 </div>
+<?php if($loop->have_posts()): ?>
 <div class="listings property-search">
 	<div class="pref beige"></div>
 	<div class="container">
@@ -225,7 +225,10 @@ if($borough === 'staten_island'):
 			</div>
 		</div>
 		<?php $count++; endwhile; ?>
-			</div>
+		</div>
+	<?php else: ?>
+		<h2 class="nothing">We're sorry, but we don't have any listings for this area</h2>
+	<?php endif; ?>
 	</div>
 </div>
 

@@ -9908,6 +9908,13 @@ body {
   content: none;
 }
 
+/* line 316, ../sass/styles.scss */
+.nothing {
+  text-align: center;
+  text-transform: uppercase;
+  color: #99b2cc;
+}
+
 @media (min-device-width: 320px) and (max-device-width: 568px) {
   /* line 2, ../sass/responsive/iphone/_all.scss */
   .navbar-brand {
