@@ -46,20 +46,24 @@
 		</div>
 
 		<!-- Modal -->
-		<div class="modal fade interested" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade contact" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title" id="myModalLabel">Contact Us</h4>
+						<div class="modal-title" id="myModalLabel">
+							<h4>Contact Us</h4>
+							<h3>
+								<span>call</span>
+								1-212-349-9212
+							</h3>
+						</div>
 					</div>
+					<div class="pref beige"></div>
 					<div class="modal-body">
+						<div class="col-md-2 col-md-offset-5"><hr></div>
 						<?php echo do_shortcode(apply_filters("the_content", "[contact-form-7 id='14' title='General Contact']")); ?>
 					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-			      </div>
 			    </div>
 			  </div>
 			</div>
